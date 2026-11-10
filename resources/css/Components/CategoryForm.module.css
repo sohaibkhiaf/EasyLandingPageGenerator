@@ -1,0 +1,191 @@
+.categoryC{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    border: var(--border-style);
+    flex: 0 0 calc(50% - 20px); /* 2 cards per row */
+    box-shadow: var(--body-shadow);
+}
+
+/* shipping region */
+
+.categoryC .categoryHeader{
+    font-size: 1rem;
+}
+
+/* shipping form  */
+
+.categoryC .categoryForm .nameC label{
+    display: block;
+    font-size: .9rem;
+    margin: 10px 0 5px 0;
+}
+.categoryC .categoryForm .nameC input{
+    font-size: .9rem;
+    padding: 5px 8px;
+    border: var(--border-style);
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.categoryC .categoryForm .nameC input:hover{
+    background-color: var(--hover-color);
+}
+.categoryC .categoryForm .nameC input:focus{
+    background-color: var(--hover-color);
+}
+.categoryC .categoryForm .nameC p{
+    font-size: .8rem;
+    color: var(--error-color);
+    margin: 0;
+}
+
+.categoryC .categoryForm .enabledC{
+    margin-top: 10px;
+}
+.categoryC .categoryForm .enabledC label{
+    font-size: .9rem;
+    margin: 10px 0 5px 0;
+}
+.categoryC .categoryForm .enabledC label input{
+    width: 15px;
+    height: 15px;
+    accent-color: var(--light-blue) ;
+    cursor: pointer;
+}
+
+/* update shipping button  */
+
+.categoryC .categoryForm .actionBtnsC{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+}
+.categoryC .categoryForm .actionBtnsC .updateBtn{
+    background-color: var(--light-blue);
+    padding: 5px 10px;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    font-size: .85rem;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.categoryC .categoryForm .actionBtnsC .updateBtn:hover{
+    background-color: var(--dark-blue);
+    cursor: pointer;
+}
+.categoryC .categoryForm .actionBtnsC .updateBtn:disabled{
+    background-color: var(--hover-color);
+    cursor: text;
+    color: var(--light-black);
+    border: var(--border-style);
+}
+
+/* delete category button */
+
+.categoryC .categoryForm .actionBtnsC .deleteBtn{
+    background-color: hsl(0, 92%, 40%);
+    padding: 5px 10px;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    font-size: .85rem;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.categoryC .categoryForm .actionBtnsC .deleteBtn:hover{
+    background-color:hsl(0, 92%, 30%);
+    cursor: pointer;
+}
+
+
+
+/* ================= RESPONSIVE SHIPPING FORM ================= */
+
+/* Large tablets */
+@media (max-width: 1200px) {
+    .categoryC {
+        flex: 0 0 calc(50% - 20px); /* 2 cards per row */
+    }
+}
+
+/* Tablets & small laptops */
+@media (max-width: 900px) {
+    .categoryC {
+        flex: 0 0 calc(50% - 10px);
+    }
+
+    .categoryC .categoryHeader {
+        font-size: 0.95rem;
+    }
+}
+
+/* Mobile & small tablets */
+@media (max-width: 768px) {
+    .categoryC {
+        flex: 0 0 100%; /* 1 card per row */
+        padding: 12px;
+    }
+
+    .categoryC .categoryHeader {
+        text-align: center;
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+
+    /* Inputs bigger for touch */
+    .categoryC .categoryForm .nameC input {
+        font-size: 1rem;
+        padding: 8px 10px;
+    }
+
+    /* Enabled checkbox spacing */
+    .categoryC .categoryForm .enabledC {
+        margin-top: 12px;
+    }
+
+    /* Update button full width */
+    .categoryC .categoryForm .actionBtnsC {
+        display: block;
+    }
+
+    .categoryC .categoryForm .actionBtnsC .updateBtn{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .categoryC .categoryForm .actionBtnsC .deleteBtn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .categoryC {
+        padding: 10px;
+    }
+
+    .categoryC .categoryHeader {
+        font-size: 0.95rem;
+    }
+
+    .categoryC .categoryForm .nameC label,
+    .categoryC .categoryForm .enabledC label {
+        font-size: 0.85rem;
+    }
+}
+

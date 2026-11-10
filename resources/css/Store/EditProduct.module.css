@@ -1,0 +1,354 @@
+
+.editPrdC{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    border: var(--border-style);
+    box-shadow: var(--body-shadow);
+}
+
+.editPrdC .editPrdHeader{
+    margin: 0 0 20px 0;
+}
+
+/* product form  */
+
+.editPrdC .editPrdForm .doubleFieldC{
+    display: flex;
+    gap: 10px;
+}
+.editPrdC .editPrdForm .doubleFieldC .categoryC{
+    flex: 0 0 50%;
+}
+
+.editPrdC .editPrdForm .nameC label,
+.editPrdC .editPrdForm .categoryC label,
+.editPrdC .editPrdForm .descC label,
+.editPrdC .editPrdForm .priceC label,
+.editPrdC .editPrdForm .discountC label,
+.editPrdC .editPrdForm .stockC label,
+.editPrdC .editPrdForm .maxQuantityC label{
+    display: block;
+    font-size: .9rem;
+    margin: 10px 0 5px 0;
+}
+.editPrdC .editPrdForm .nameC input,
+.editPrdC .editPrdForm .categoryC select,
+.editPrdC .editPrdForm .descC textarea,
+.editPrdC .editPrdForm .priceC input,
+.editPrdC .editPrdForm .discountC input,
+.editPrdC .editPrdForm .stockC input,
+.editPrdC .editPrdForm .maxQuantityC input{
+    font-size: 1rem;
+    padding: 8px 10px;
+    border: var(--border-style);
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.editPrdC .editPrdForm .descC textarea{
+    resize: none;
+    height: 200px;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.editPrdC .editPrdForm .nameC input:hover,
+.editPrdC .editPrdForm .categoryC select:hover,
+.editPrdC .editPrdForm .descC textarea:hover,
+.editPrdC .editPrdForm .priceC input:hover,
+.editPrdC .editPrdForm .discountC input:hover,
+.editPrdC .editPrdForm .stockC input:hover,
+.editPrdC .editPrdForm .maxQuantityC input:hover{
+    background-color: var(--hover-color);
+}
+.editPrdC .editPrdForm .nameC input:focus,
+.editPrdC .editPrdForm .categoryC select:focus,
+.editPrdC .editPrdForm .descC textarea:focus,
+.editPrdC .editPrdForm .priceC input:focus,
+.editPrdC .editPrdForm .discountC input:focus,
+.editPrdC .editPrdForm .stockC input:focus,
+.editPrdC .editPrdForm .maxQuantityC input:focus{
+    background-color: var(--hover-color);
+}
+.editPrdC .editPrdForm .nameC p,
+.editPrdC .editPrdForm .categoryC p,
+.editPrdC .editPrdForm .descC p,
+.editPrdC .editPrdForm .priceC p,
+.editPrdC .editPrdForm .discountC p,
+.editPrdC .editPrdForm .stockC p,
+.editPrdC .editPrdForm .maxQuantityC p{
+    font-size: .9rem;
+    color: var(--error-color);
+    margin: 0;
+}
+
+.editPrdC .editPrdForm .trackStockC,
+.editPrdC .editPrdForm .enabledC{
+    margin-top: 10px;
+}
+.editPrdC .editPrdForm .trackStockC label,
+.editPrdC .editPrdForm .enabledC label{
+    font-size: 1rem;
+    margin: 10px 0 5px 0;
+}
+.editPrdC .editPrdForm .trackStockC label input,
+.editPrdC .editPrdForm .enabledC label input{
+    width: 15px;
+    height: 15px;
+    accent-color: var(--light-blue) ;
+    cursor: pointer;
+}
+
+
+/* main image */
+
+.editPrdC .editPrdForm .mainImgPickerC label{
+    display: block;
+    font-size: .9rem;
+    margin: 10px 0 5px 0;
+}
+.editPrdC .editPrdForm .mainImgPickerC .mainC {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.editPrdC .editPrdForm .mainImgPickerC .mainC img{
+    width: 540px;
+    height: 540px;
+    border-radius: 5px;
+    cursor: pointer;
+    object-fit: cover;
+}
+.editPrdC .editPrdForm .mainImgPickerC .mainC img:hover{
+    opacity: .9;
+}
+.editPrdC .editPrdForm .mainImgPickerC p{
+    font-size: .9rem;
+    color: var(--error-color);
+    margin: 0;
+}
+
+
+/* multiple images */
+
+.editPrdC .editPrdForm .multipleImgsPickerC label{
+    display: block;
+    font-size: .9rem;
+    margin: 10px 0 5px 0;
+}
+.editPrdC .editPrdForm .multipleImgsPickerC .multipleC {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+/* images  */
+.editPrdC .editPrdForm .multipleImgsPickerC .multipleC
+.imageC{
+    position: relative;
+    display: flex;
+}
+.editPrdC .editPrdForm .multipleImgsPickerC .multipleC
+.imageC .deleteImg{
+    color: #ffffff;
+    position: absolute;
+    top: 7px;
+    cursor: pointer;
+    opacity: .9;
+}
+.editPrdC .editPrdForm .multipleImgsPickerC .multipleC
+.imageC .deleteImg:hover{
+    opacity: 1;
+}
+.editPrdC .editPrdForm .multipleImgsPickerC .multipleC
+.imageC img{
+    width: 120px;
+    height: 120px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+/* picker */
+.editPrdC .editPrdForm .multipleImgsPickerC .multipleC
+img.pickerImg{
+    width: 120px;
+    height: 120px;
+    border-radius: 5px;
+    object-fit: cover;
+    cursor: pointer;
+}
+.editPrdC .editPrdForm .multipleImgsPickerC .multipleC
+img.pickerImg:hover{
+    opacity: .9;
+}
+.editPrdC .editPrdForm .multipleImgsPickerC p{
+    font-size: .9rem;
+    color: var(--error-color);
+    margin: 0;
+}
+
+
+
+
+/* action buttons  */
+
+.editPrdC .editPrdForm .actionBtnsC{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* update button */
+
+.editPrdC .editPrdForm .actionBtnsC .updateBtn{
+    background-color: var(--light-blue);
+    padding: 5px 10px;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    font-size: .9rem;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.editPrdC .editPrdForm .actionBtnsC .updateBtn:hover{
+    background-color: var(--dark-blue);
+    cursor: pointer;
+}
+.editPrdC .editPrdForm .actionBtnsC .updateBtn:disabled{
+    background-color: #ffffff;
+    color: var(--light-black);
+    border: var(--border-style);
+    cursor: default;
+}
+
+/* delete button */
+
+.editPrdC .editPrdForm .actionBtnsC .deleteBtn{
+    background-color: hsl(0, 92%, 40%);
+    padding: 5px 10px;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    font-size: .9rem;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.editPrdC .editPrdForm .actionBtnsC .deleteBtn:hover{
+    background-color:hsl(0, 92%, 30%);
+    cursor: pointer;
+}
+
+
+/* ================= RESPONSIVE PROJECT FORM ================= */
+
+/* Mobile & small tablets */
+@media (max-width: 768px) {
+
+    /* Stack all double fields */
+    .editPrdC .editPrdForm .doubleFieldC {
+        flex-direction: column;
+    }
+
+    .editPrdC .editPrdForm .doubleFieldC > div {
+        flex: 1 0 100%;
+    }
+
+    .editPrdC .editPrdForm textarea {
+        height: 160px;
+    }
+
+    /* Main image */
+    .editPrdC .editPrdForm .mainImgPickerC .mainC img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Multiple images grid */
+    .editPrdC .editPrdForm .multipleImgsPickerC .multipleC {
+        gap: 8px;
+    }
+
+    .editPrdC .editPrdForm .multipleImgsPickerC .multipleC
+    .imageC img,
+    .editPrdC .editPrdForm .multipleImgsPickerC .multipleC
+    img.pickerImg {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Action buttons full width */
+    .editPrdC .editPrdForm .actionBtnsC {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .editPrdC .editPrdForm .actionBtnsC button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+
+    .editPrdC {
+        padding: 12px;
+    }
+
+    .editPrdC .editPrdHeader {
+        font-size: 1.2rem;
+    }
+
+    .editPrdC .editPrdForm label {
+        font-size: 0.85rem;
+    }
+
+    .editPrdC .editPrdForm input,
+    .editPrdC .editPrdForm textarea {
+        font-size: 0.95rem;
+        padding: 8px;
+    }
+
+    .editPrdC .editPrdForm .trackStockC label {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+
+    /* Main image smaller */
+    .editPrdC .editPrdForm .mainImgPickerC .mainC img {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+
+    /* Multiple images tighter grid */
+    .editPrdC .editPrdForm .multipleImgsPickerC .multipleC {
+        gap: 6px;
+    }
+
+    .editPrdC .editPrdForm .multipleImgsPickerC .multipleC
+    .imageC img,
+    .editPrdC .editPrdForm .multipleImgsPickerC .multipleC
+    img.pickerImg {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+
+
+

@@ -1,0 +1,186 @@
+/* Base container */
+.securityC {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    border: var(--border-style);
+    box-shadow: var(--body-shadow);
+}
+
+/* Header */
+.securityC .securityHeader {
+    margin: 0 0 20px 0;
+    font-size: 1.5rem;
+}
+
+/* Password section */
+.securityC .passwordHeader {
+    margin: 5px 0 15px 0;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.securityC .passwordForm {
+    margin-bottom: 20px;
+}
+
+.securityC .passwordForm .doubleFieldC {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* allow stacking on small screens */
+}
+
+.securityC .passwordForm .currentPasswordC,
+.securityC .passwordForm .passwordC,
+.securityC .passwordForm .passwordConfirmationC {
+    flex: 1 1 70%;
+    min-width: 200px;
+}
+
+/* Labels */
+.securityC .passwordForm label {
+    display: block;
+    font-size: .9rem;
+    margin: 10px 0 5px 0;
+}
+
+/* Inputs */
+.securityC .passwordForm input {
+    font-size: 1rem;
+    padding: 8px 10px;
+    border: var(--border-style);
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+}
+.securityC .passwordForm input:hover,
+.securityC .passwordForm input:focus {
+    background-color: var(--hover-color);
+}
+
+/* Errors */
+.securityC .passwordForm p {
+    font-size: .9rem;
+    color: var(--error-color);
+    margin: 0;
+}
+
+/* Change password button */
+.securityC .changePasswordBtnC {
+    display: flex;
+    justify-content: flex-start;
+}
+.securityC .changePasswordBtn {
+    background-color: var(--light-blue);
+    padding: 5px 10px;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 0;
+    font-size: .9rem;
+    margin: 20px 0 0 0;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.securityC .changePasswordBtn:hover {
+    background-color: var(--dark-blue);
+    cursor: pointer;
+}
+
+/* Devices section */
+.securityC .devicesHeader {
+    margin: 5px 0 15px 0;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.securityC .devicesC {
+    position: relative;
+}
+
+.securityC .devicesC .yourDevices {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Logout devices button */
+.securityC .devicesC .logOutBtn {
+    text-decoration: none;
+    position: absolute;
+    top: -62px;
+    background-color: var(--light-blue);
+    padding: 5px 10px;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    font-size: .9rem;
+    margin: 20px 0 0 0;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.securityC .devicesC .logOutBtn:hover {
+    background-color: var(--dark-blue);
+    cursor: pointer;
+}
+.securityC .devicesC .logOutBtn:disabled {
+    background-color: #ffffff;
+    color: var(--light-black);
+    border: var(--border-style);
+    cursor: default;
+}
+
+/* ================== RESPONSIVE STYLES ================== */
+@media (max-width: 768px) {
+    /* Stack password fields vertically */
+    .securityC .passwordForm .doubleFieldC {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Make devices list wrap nicely */
+    .securityC .devicesC .yourDevices {
+        justify-content: center;
+    }
+
+    /* Move logout button below devices list on mobile */
+    .securityC .devicesC .logOutBtn {
+        position: static;
+        display: block;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .securityC .changePasswordBtn{
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .securityC {
+        padding: 15px;
+    }
+
+    .securityC .securityHeader {
+        font-size: 1.3rem;
+    }
+
+    .securityC .passwordHeader,
+    .securityC .devicesHeader {
+        font-size: .95rem;
+    }
+
+    .securityC .changePasswordBtn{
+        width: 100%;
+    }
+
+}

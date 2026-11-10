@@ -1,0 +1,37 @@
+
+.main{
+    max-width: 100%;
+    margin: 80px 100px 30px;
+}
+
+/* responsive *************************************************************** */
+
+/* ================================
+   RESPONSIVE BREAKPOINTS
+================================ */
+
+/* Large tablets & small laptops */
+@media (max-width: 1024px) {
+    .main{
+        margin: 70px 30px 25px;
+        padding: 18px;
+    }
+}
+
+/* Tablets & mobile */
+@media (max-width: 768px) {
+    .main{
+        margin: 65px 10px 20px;
+        padding: 15px;
+        border-radius: 8px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .main{
+        margin: 60px 6px 15px;
+        padding: 12px;
+        border-radius: 6px;
+    }
+}

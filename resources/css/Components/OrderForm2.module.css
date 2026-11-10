@@ -1,0 +1,438 @@
+
+.orderC{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    border: var(--border-style);
+    margin-bottom: 20px;
+    box-shadow: var(--body-shadow);
+}
+
+/* order identifier *********************************************** */
+.orderC .orderIdentifier{
+    font-size: 1rem;
+}
+
+/* order form ******************************************************************************* */
+
+.orderC .form .editOrderInnerC{
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 10px;
+}
+
+/* payement  */
+
+.orderC .form .editOrderInnerC .orderPayementFormC{
+    flex: 1 1 50%;
+    padding: 10px;
+}
+
+.orderC .form .editOrderInnerC .orderPayementFormC .doubleFieldC{
+    display: flex;
+    gap: 10px;
+}
+.orderC .form .editOrderInnerC .orderPayementFormC .doubleFieldC div{
+    flex: 1 1 50%;
+}
+
+
+.orderC  .form .editOrderInnerC .orderPayementFormC .subtotalC label,
+.orderC  .form .editOrderInnerC .orderPayementFormC .shippingC label,
+.orderC  .form .editOrderInnerC .orderPayementFormC .totalC label,
+.orderC  .form .editOrderInnerC .orderPayementFormC .statusC label,
+.orderC  .form .editOrderInnerC .orderPayementFormC .quantityC label,
+.orderC  .form .editOrderInnerC .orderPayementFormC .unitPriceC label,
+.orderC  .form .editOrderInnerC .orderPayementFormC .shippingTypeC label{
+    display: block;
+    font-size: .9rem;
+    margin: 10px 0 5px 0;
+}
+.orderC  .form .editOrderInnerC .orderPayementFormC .subtotalC input,
+.orderC  .form .editOrderInnerC .orderPayementFormC .shippingC input,
+.orderC  .form .editOrderInnerC .orderPayementFormC .totalC input,
+.orderC  .form .editOrderInnerC .orderPayementFormC .statusC select,
+.orderC  .form .editOrderInnerC .orderPayementFormC .quantityC input,
+.orderC  .form .editOrderInnerC .orderPayementFormC .unitPriceC input,
+.orderC  .form .editOrderInnerC .orderPayementFormC .shippingTypeC select{
+    font-size: .9rem;
+    padding: 5px 8px;
+    border: var(--border-style);
+    border-radius: 5px;
+    width: 100%;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.orderC  .form .editOrderInnerC .orderPayementFormC .statusC {
+    flex: 0 0 50% !important;
+}
+.orderC  .form .editOrderInnerC .orderPayementFormC .subtotalC input:hover,
+.orderC  .form .editOrderInnerC .orderPayementFormC .shippingC input:hover,
+.orderC  .form .editOrderInnerC .orderPayementFormC .totalC input:hover,
+.orderC  .form .editOrderInnerC .orderPayementFormC .statusC select:hover,
+.orderC  .form .editOrderInnerC .orderPayementFormC .quantityC input:hover,
+.orderC  .form .editOrderInnerC .orderPayementFormC .unitPriceC input:hover,
+.orderC  .form .editOrderInnerC .orderPayementFormC .shippingTypeC select:hover{
+    background-color: var(--hover-color);
+}
+.orderC  .form .editOrderInnerC .orderPayementFormC .subtotalC input:focus,
+.orderC  .form .editOrderInnerC .orderPayementFormC .shippingC input:focus,
+.orderC  .form .editOrderInnerC .orderPayementFormC .totalC input:focus,
+.orderC  .form .editOrderInnerC .orderPayementFormC .statusC select:focus,
+.orderC  .form .editOrderInnerC .orderPayementFormC .quantityC input:focus,
+.orderC  .form .editOrderInnerC .orderPayementFormC .unitPriceC input:focus,
+.orderC  .form .editOrderInnerC .orderPayementFormC .shippingTypeC select:focus{
+    background-color: var(--hover-color);
+}
+.orderC  .form .editOrderInnerC .orderPayementFormC .subtotalC p,
+.orderC  .form .editOrderInnerC .orderPayementFormC .shippingC p,
+.orderC  .form .editOrderInnerC .orderPayementFormC .totalC p,
+.orderC  .form .editOrderInnerC .orderPayementFormC .statusC p,
+.orderC  .form .editOrderInnerC .orderPayementFormC .quantityC p,
+.orderC  .form .editOrderInnerC .orderPayementFormC .unitPriceC p,
+.orderC  .form .editOrderInnerC .orderPayementFormC .shippingTypeC p{
+    font-size: .8rem;
+    color: var(--error-color);
+    margin: 0;
+}
+
+/* toggle buttons */
+
+.orderC .form .editOrderInnerC .orderPayementFormC .doubleFieldC .toggleBtnsC{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items:end;
+    gap: 10px;
+}
+.orderC .form .editOrderInnerC .orderPayementFormC .doubleFieldC .toggleBtnsC
+.toggleClientInformation{
+    bottom: 0;
+    background-color: var(--light-blue);
+    height:fit-content;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    visibility: hidden;
+}
+.orderC .form .editOrderInnerC .orderPayementFormC .doubleFieldC .toggleBtnsC
+.toggleClientInformation:hover {
+    background-color: var(--dark-blue);
+}
+.orderC .form .editOrderInnerC .orderPayementFormC .doubleFieldC .toggleBtnsC
+.toggleClientInformation .hideClientInfoC{
+    display: none;
+}
+.orderC .form .editOrderInnerC .orderPayementFormC .doubleFieldC .toggleBtnsC
+.toggleClientInformation .toggleIcon,
+.orderC .form .editOrderInnerC .orderPayementFormC .doubleFieldC .toggleBtnsC
+.toggleClientInformation span .toggleIcon{
+    color: #ffffff;
+    font-size: .9rem;
+}
+
+.orderC .form .editOrderInnerC .orderPayementFormC .doubleFieldC .toggleBtnsC
+.toggleOrderItems{
+    bottom: 0;
+    background-color: var(--light-blue);
+    height:fit-content;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.orderC .form .editOrderInnerC .orderPayementFormC .doubleFieldC .toggleBtnsC
+.toggleOrderItems:hover {
+    background-color: var(--dark-blue);
+}
+.orderC .form .editOrderInnerC .orderPayementFormC .doubleFieldC .toggleBtnsC
+.toggleOrderItems .hideOrderItemsC{
+    display: none;
+}
+.orderC .form .editOrderInnerC .orderPayementFormC .doubleFieldC .toggleBtnsC
+.toggleOrderItems .toggleIcon,
+.orderC .form .editOrderInnerC .orderPayementFormC .doubleFieldC .toggleBtnsC
+.toggleOrderItems span .toggleIcon{
+    color: #ffffff;
+    font-size: .9rem;
+}
+
+
+/* client  */
+
+.orderC  .form .editOrderInnerC .orderClientFormC{
+    flex: 1 1 50%;
+    padding: 10px;
+    padding-bottom: 0;
+}
+
+.orderC  .form .editOrderInnerC .orderClientFormC .nameC label,
+.orderC  .form .editOrderInnerC .orderClientFormC .phoneC label,
+.orderC  .form .editOrderInnerC .orderClientFormC .addressC label{
+    display: block;
+    font-size: .9rem;
+    margin: 10px 0 5px 0;
+}
+.orderC  .form .editOrderInnerC .orderClientFormC .nameC input,
+.orderC  .form .editOrderInnerC .orderClientFormC .phoneC input,
+.orderC  .form .editOrderInnerC .orderClientFormC .addressC input{
+    font-size: .9rem;
+    padding: 5px 8px;
+    border: var(--border-style);
+    border-radius: 5px;
+    width: 100%;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.orderC  .form .editOrderInnerC .orderClientFormC .nameC input:hover,
+.orderC  .form .editOrderInnerC .orderClientFormC .phoneC input:hover,
+.orderC  .form .editOrderInnerC .orderClientFormC .addressC input:hover{
+    background-color: var(--hover-color);
+}
+.orderC  .form .editOrderInnerC .orderClientFormC .nameC input:focus,
+.orderC  .form .editOrderInnerC .orderClientFormC .phoneC input:focus,
+.orderC  .form .editOrderInnerC .orderClientFormC .addressC input:focus{
+    background-color: var(--hover-color);
+}
+.orderC  .form .editOrderInnerC .orderClientFormC .nameC p,
+.orderC  .form .editOrderInnerC .orderClientFormC .phoneC p,
+.orderC  .form .editOrderInnerC .orderClientFormC .addressC p{
+    font-size: .8rem;
+    color: var(--error-color);
+    margin: 0;
+}
+
+
+/* order items  */
+
+.orderC .form .editOrderInnerC .orderItemsFormC{
+    flex: 1 1 100%;
+    padding: 10px 10px 0 10px;
+    display: none;
+}
+
+.orderC .form .editOrderInnerC .orderItemsFormC label{
+    display: block;
+    font-size: .9rem;
+    margin-top: 10px;
+}
+
+.orderC .form .editOrderInnerC .orderItemsFormC .doubleFieldC{
+    display: flex;
+    gap: 10px;
+}
+.orderC .form .editOrderInnerC .orderItemsFormC .doubleFieldC div{
+    flex: 1 1 50%;
+}
+
+
+.orderC  .form .editOrderInnerC .orderItemsFormC .subtotalC label,
+.orderC  .form .editOrderInnerC .orderItemsFormC .productNameC label,
+.orderC  .form .editOrderInnerC .orderItemsFormC .quantityC label,
+.orderC  .form .editOrderInnerC .orderItemsFormC .unitPriceC label{
+    display: block;
+    font-size: .9rem;
+    margin: 10px 0 5px 0;
+}
+.orderC  .form .editOrderInnerC .orderItemsFormC .subtotalC input,
+.orderC  .form .editOrderInnerC .orderItemsFormC .productNameC input,
+.orderC  .form .editOrderInnerC .orderItemsFormC .quantityC input,
+.orderC  .form .editOrderInnerC .orderItemsFormC .unitPriceC input{
+    font-size: .9rem;
+    padding: 5px 8px;
+    border: var(--border-style);
+    border-radius: 5px;
+    width: 100%;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.orderC  .form .editOrderInnerC .orderItemsFormC .subtotalC input:hover,
+.orderC  .form .editOrderInnerC .orderItemsFormC .productNameC input:hover,
+.orderC  .form .editOrderInnerC .orderItemsFormC .quantityC input:hover,
+.orderC  .form .editOrderInnerC .orderItemsFormC .unitPriceC input:hover{
+    background-color: var(--hover-color);
+}
+.orderC  .form .editOrderInnerC .orderItemsFormC .subtotalC input:focus,
+.orderC  .form .editOrderInnerC .orderItemsFormC .productNameC input:focus,
+.orderC  .form .editOrderInnerC .orderItemsFormC .quantityC input:focus,
+.orderC  .form .editOrderInnerC .orderItemsFormC .unitPriceC input:focus{
+    background-color: var(--hover-color);
+}
+.orderC  .form .editOrderInnerC .orderItemsFormC .subtotalC p,
+.orderC  .form .editOrderInnerC .orderItemsFormC .productNameC p,
+.orderC  .form .editOrderInnerC .orderItemsFormC .quantityC p,
+.orderC  .form .editOrderInnerC .orderItemsFormC .unitPriceC p{
+    font-size: .8rem;
+    color: var(--error-color);
+    margin: 0;
+}
+
+
+/* actions  */
+
+.orderC  .form .actionBtnsC{
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.orderC  .form .actionBtnsC .updateBtn{
+    background-color: var(--light-blue);
+    padding: 5px 10px;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    font-size: .9rem;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.orderC  .form  .actionBtnsC .updateBtn:hover{
+    background-color: var(--dark-blue);
+    cursor: pointer;
+}
+.orderC  .form  .actionBtnsC .updateBtn:disabled{
+    background-color: var(--hover-color);
+    cursor: text;
+    color: var(--light-black);
+    border: var(--border-style);
+}
+
+/* delete button */
+
+.orderC  .form  .actionBtnsC .deleteBtn{
+    background-color: hsl(0, 92%, 40%);
+    padding: 5px 10px;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    font-size: .85rem;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.orderC  .form  .actionBtnsC .deleteBtn:hover{
+    background-color:hsl(0, 92%, 30%);
+    cursor: pointer;
+}
+
+
+/* ===============================
+   RESPONSIVE – ORDER ITEM
+   =============================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+
+    /* details & form layout */
+    .orderC .form .editOrderInnerC {
+        flex-wrap: wrap;
+    }
+
+    .orderC .form .editOrderInnerC .orderPayementFormC,
+    .orderC .form .editOrderInnerC .orderClientFormC {
+        flex: 1 1 100%;
+    }
+
+    .orderC .form .editOrderInnerC .orderPayementFormC {
+        padding-bottom: 0;
+    }
+
+    .orderC .form .editOrderInnerC .orderClientFormC {
+        border: 0 !important;
+        padding-top: 0;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .orderC {
+        padding: 14px;
+        border-radius: 8px;
+    }
+
+    /* ===== Edit form ===== */
+
+    .orderC .form .editOrderInnerC {
+        flex-direction: column;
+    }
+
+    /* inputs */
+    .orderC input {
+        font-size: 0.95rem;
+        padding: 8px;
+    }
+
+    /* ===== Form actions ===== */
+
+    .orderC .form .actionBtnsC {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .orderC .form .actionBtnsC button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .orderC .form .editOrderInnerC .orderPayementFormC
+    .doubleFieldC .toggleBtnsC .toggleClientInformation{
+        visibility: visible;
+    }
+    .orderC .form .editOrderInnerC .orderPayementFormC .doubleFieldC .toggleBtnsC
+    .toggleClientInformation .toggleIcon,
+    .orderC .form .editOrderInnerC .orderPayementFormC .doubleFieldC .toggleBtnsC
+    .toggleClientInformation span .toggleIcon{
+        font-size: .8rem;
+    }
+    .orderC .form .editOrderInnerC .orderPayementFormC .doubleFieldC .toggleBtnsC
+    .toggleOrderItems .toggleIcon,
+    .orderC .form .editOrderInnerC .orderPayementFormC .doubleFieldC .toggleBtnsC
+    .toggleOrderItems span .toggleIcon{
+        font-size: .8rem;
+    }
+    .orderC .form .editOrderInnerC .orderPayementFormC .doubleFieldC .toggleBtnsC
+    .toggleClientInformation{
+        padding: 5px 6px;
+    }
+    .orderC .form .editOrderInnerC .orderPayementFormC .doubleFieldC .toggleBtnsC
+    .toggleOrderItems{
+        padding: 5px 6px;
+    }
+
+    .orderC  .form .editOrderInnerC .orderClientFormC{
+        display: none;
+    }
+
+}
+
+/* Very small phones */
+@media (max-width: 480px) {
+
+    .orderC {
+        padding: 12px;
+    }
+
+    .orderC p,
+    .orderC label {
+        font-size: 0.9rem;
+    }
+}
+

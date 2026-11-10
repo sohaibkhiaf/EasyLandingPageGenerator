@@ -1,0 +1,97 @@
+
+.productsC{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    border: var(--border-style);
+    box-shadow: var(--body-shadow);
+}
+
+.productsC .productsHeader{
+    margin: 0 0 20px 0;
+}
+
+
+/* create category button  */
+
+.productsC .createPrdBtnC{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.productsC .createPrdBtnC .createPrdBtn{
+    background-color: var(--light-blue);
+    padding: 5px 10px;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: .9rem;
+    border: 0;
+    text-decoration: none;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.productsC .createPrdBtnC .createPrdBtn:hover{
+    background-color: var(--dark-blue);
+    cursor: pointer;
+}
+
+/* products container  */
+
+.productsC .prdsC{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.productsC .noProductsMsg{
+    font-size: 1rem;
+}
+
+/* ================= RESPONSIVE SHIPPING ================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .productsC {
+        padding: 16px;
+    }
+
+    .productsC .productsHeader {
+        font-size: 1.4rem;
+    }
+
+    .productsC .prdsC {
+        gap: 12px;
+    }
+}
+
+/* Mobile & small tablets */
+@media (max-width: 768px) {
+
+    /* Header centered */
+    .productsC .productsHeader {
+        font-size: 1.3rem;
+    }
+
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+
+    .productsC {
+        padding: 12px;
+    }
+
+    .productsC .noProductsMsg{
+        font-size: .9rem;
+    }
+
+    .productsC .productsHeader {
+        font-size: 1.2rem;
+    }
+
+}
+

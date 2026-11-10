@@ -1,0 +1,275 @@
+/* container ********************************************* */
+.openPanelC {
+    position: fixed;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+    background-color: #ffffff;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+    padding: 10px;
+    z-index: 1000;
+    overflow-y: auto;
+
+    /* animation */
+    transition: all 0.4s ease;
+
+    /* visible */
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.closedPanelC {
+    position: fixed;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+    background-color: #ffffff;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+    padding: 20px;
+    z-index: 1000;
+    overflow-y: auto;
+
+    /* animation */
+    transition: all 0.4s ease;
+
+    /* hidden */
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+/* close button ************************************************ */
+.closeBtnC {
+    display: flex;
+    justify-content: flex-end;
+}
+.closeBtnC .closeBtn{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* product details ********************************************* */
+.productPanelC{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* phone/tablet version ***************************************** */
+.productPanelC .nameOverImgC{
+    display: none;
+}
+.productPanelC .nameOverImgC .category{
+    font-size: .9rem;
+    color: var(--light-text);
+    text-decoration: none;
+    margin: 0;
+}
+.productPanelC .nameOverImgC .name{
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* images *************************************************** */
+.productPanelC .imagesC{
+    flex: 1 1 50%;
+}
+/* preview image  */
+.productPanelC .imagesC .previewImageC{
+    margin-bottom: 10px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.productPanelC .imagesC .previewImageC .previewImage{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: transform 0.1s ease;
+    transform-origin: center;
+    aspect-ratio: 1 / 1; 
+}
+.productPanelC .imagesC .previewImageC .previewImage:hover{
+    transform: scale(1.2);
+}
+/* multiple images  */
+.productPanelC .imagesC .multipleImagesC{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+.productPanelC .imagesC .multipleImagesC .multipleImage{
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+}
+.productPanelC .imagesC .multipleImagesC .multipleImage:hover {
+    opacity: .7;
+}
+
+/* project details ****************************************** */
+.productPanelC .detailsC{
+    flex: 1 1 50%;
+}
+/* category */
+.productPanelC .detailsC .category{
+    font-size: .9rem;
+    color: var(--light-text);
+    text-decoration: none;
+    margin: 0;
+}
+/* project name  */
+.productPanelC .detailsC .name{
+    font-size: 1.1rem;
+    margin: 0 0 5px 0;
+}
+/* price */
+.productPanelC .detailsC .price{
+    font-size: 1rem;
+    margin: 0 0 5px 0;
+}
+/* price+ discount */
+.productPanelC .detailsC .priceC{
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 0 5px 0;
+}
+.productPanelC .detailsC .priceC .discount{
+    font-size: 1rem;
+    margin: 0;
+}
+.productPanelC .detailsC .priceC .price{
+    text-decoration: line-through;
+    font-size: 1rem;
+    color: var(--light-black);
+    margin: 0;
+}
+/* availability */
+.productPanelC .detailsC .available{
+    font-size: 1rem;
+    margin: 0 0 5px 0;
+}
+.productPanelC .detailsC .unavailable{
+    font-size: 1rem;
+    margin: 0 0 5px 0;
+}
+/* description */
+.productPanelC .detailsC .description{
+    font-size: 1rem;
+    margin: 10px 0 20px 0;
+    white-space: pre-line;
+}
+
+/* add to cart button ************************************* */
+.productPanelC .detailsC .addToCartBtnC {
+    display: flex;
+    justify-content: center;
+}
+.productPanelC .detailsC .addToCartBtnC .addToCartBtn {
+    background-color: var(--light-blue);
+    padding: 5px 10px;
+    width: 100%;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    font-size: .9rem;
+    cursor: pointer;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.productPanelC .detailsC .addToCartBtnC .addToCartBtn:hover{
+    background-color: var(--dark-blue);
+}
+
+/* quantity manipulation **************************************** */
+.productPanelC .detailsC .quantityC {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.productPanelC .detailsC .quantityC .decreaseQuantity,
+.productPanelC .detailsC .quantityC .increaseQuantity{
+    background-color: #ffffff;
+    font-size: .9rem;
+    padding: 5px 8px;
+    border: var(--border-style);
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.productPanelC .detailsC .quantityC .decreaseQuantity:hover,
+.productPanelC .detailsC .quantityC .increaseQuantity:hover{
+    background-color: var(--hover-color);
+}
+.productPanelC .detailsC .quantityC .itemQuantity{
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* ================================
+   RESPONSIVE BREAKPOINTS
+================================ */
+
+/* Tablets & small laptops */
+@media (max-width: 1024px) {
+
+    /* panel container */
+    .openPanelC,
+    .closedPanelC{
+        width: 60%;
+    }
+
+}
+
+/* Mobile & small tablets */
+@media (max-width: 768px) {
+
+    /* panel container */
+    .openPanelC,
+    .closedPanelC{
+        width: 75%;
+    }
+
+    /* product details */
+    .productPanelC{
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    /* phone tablet version */
+    .productPanelC .nameOverImgC{
+        display: block;
+    }
+
+    /* product details */
+    .productPanelC .detailsC .category,
+    .productPanelC .detailsC .name{
+        display: none;
+    }
+
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+
+    /* container */
+    .openPanelC,
+    .closedPanelC{
+        width: 90%;
+    }
+
+}
+
+

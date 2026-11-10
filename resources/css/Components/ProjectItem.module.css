@@ -1,0 +1,48 @@
+
+.projectC{
+    border: var(--border-style);
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+    box-shadow: var(--body-shadow);
+    position: relative;
+
+    /* disable selection */
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.projectC:hover{
+    background-color: var(--hover-color);
+}
+
+.projectC .projectImage{
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    aspect-ratio: 1/ 1;
+}
+
+.projectC .projectName{
+    font-size: .9rem;
+    margin: 0;
+}
+
+
+.projectC .projectCreateDate{
+    font-size: .8rem;
+    font-style: italic;
+    color: var(--light-text);
+    margin: 0;
+}
+
+.projectC .projectIcon{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    margin: 20px;
+}

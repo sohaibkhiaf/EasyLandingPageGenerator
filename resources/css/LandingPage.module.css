@@ -1,0 +1,392 @@
+
+.landingPageC{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+/* phone/tablet version ***************************************************************** */
+.landingPageC .nameOverImgC{
+    display: none;
+}
+.landingPageC .nameOverImgC .category{
+    font-size: 1rem;
+    color: var(--light-text);
+    text-decoration: none;
+    margin: 0;
+}
+.landingPageC .nameOverImgC .name{
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* images ********************************************************************************* */
+
+.landingPageC .imagesC{
+    flex: 1 1 50%;
+}
+/* preview image */
+.landingPageC .imagesC .previewImageC{
+    margin-bottom: 10px;
+    width: 100%;
+    height: 540px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.landingPageC .imagesC .previewImageC .previewImage{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: transform 0.1s ease;
+    transform-origin: center;
+}
+.landingPageC .imagesC .previewImageC .previewImage:hover{
+    transform: scale(1.2);
+}
+/* multiple images */
+.landingPageC .imagesC .multipleImagesC{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+.landingPageC .imagesC .multipleImagesC .multipleImage{
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* makes it square */
+}
+.landingPageC .imagesC .multipleImagesC .multipleImage:hover {
+    opacity: .7;
+}
+
+/* project details ****************************************************************************** */
+.landingPageC .detailsC{
+    flex: 1 1 50%;
+}
+/* category */
+.landingPageC .detailsC .category{
+    font-size: 1rem;
+    color: var(--light-text);
+    text-decoration: none;
+    margin: 0;
+}
+/* project name  */
+.landingPageC .detailsC .name{
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+/* price */
+.landingPageC .detailsC .price{
+    font-size: 1.3rem;
+    margin: 0 0 5px 0;
+}
+.landingPageC .detailsC .priceC{
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 0 5px 0;
+}
+.landingPageC .detailsC .priceC .discount{
+    font-size: 1.3rem;
+    margin: 0;
+}
+.landingPageC .detailsC .priceC .price{
+    text-decoration: line-through;
+    font-size: 1.3rem;
+    color: var(--light-black);
+    margin: 0;
+}
+/* availability */
+.landingPageC .detailsC .available{
+    font-size: 1.1rem;
+    margin: 0;
+}
+.landingPageC .detailsC .unavailable{
+    font-size: 1.1rem;
+    margin: 0;
+}
+/* free shipping */
+.landingPageC .detailsC .freeShipping{
+    font-size: 1.1rem;
+    margin: 0 0 0 0;
+}
+/* description */
+.landingPageC .detailsC .description{
+    font-size: 1rem;
+    margin: 10px 0 20px 0;
+    white-space: pre-line;
+}
+
+/* order form ************************************************************************************* */
+
+.landingPageC .detailsC .formC .doubleFieldC{
+    display: flex;
+    gap: 10px;
+}
+.landingPageC .detailsC .formC .doubleFieldC div{
+    flex: 1 1 50%;
+}
+/* client name, client phone, client address  */
+.landingPageC .detailsC .formC .clientNameC label,
+.landingPageC .detailsC .formC .clientPhoneC label,
+.landingPageC .detailsC .formC .clientAddressC label{
+    display: block;
+    font-size: .9rem;
+    margin: 10px 0 5px 0;
+}
+.landingPageC .detailsC .formC .clientNameC input,
+.landingPageC .detailsC .formC .clientPhoneC input,
+.landingPageC .detailsC .formC .clientAddressC input{
+    font-size: 1rem;
+    padding: 8px 10px;
+    border: var(--border-style);
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.landingPageC .detailsC .formC .clientNameC input:hover,
+.landingPageC .detailsC .formC .clientPhoneC input:hover,
+.landingPageC .detailsC .formC .clientAddressC input:hover{
+    background-color: var(--hover-color);
+}
+.landingPageC .detailsC .formC .clientNameC input:focus,
+.landingPageC .detailsC .formC .clientPhoneC input:focus,
+.landingPageC .detailsC .formC .clientAddressC input:focus{
+    background-color: var(--hover-color);
+}
+.landingPageC .detailsC .formC .clientNameC p,
+.landingPageC .detailsC .formC .clientPhoneC p,
+.landingPageC .detailsC .formC .clientAddressC p{
+    font-size: .9rem;
+    color: var(--error-color);
+    margin: 0;
+}
+/* client region, shipping type, order quantity */
+.landingPageC .detailsC .formC .shippingTypeC label,
+.landingPageC .detailsC .formC .quantityC label,
+.landingPageC .detailsC .formC .regionC label{
+    display: block;
+    font-size: .9rem;
+    margin: 10px 0 5px 0;
+}
+.landingPageC .detailsC .formC .shippingTypeC select,
+.landingPageC .detailsC .formC .quantityC select,
+.landingPageC .detailsC .formC .regionC select{
+    font-size: 1rem;
+    padding: 8px 10px;
+    border-radius: 10px;
+    border: var(--border-style);
+    background-color: #ffffff;
+    cursor: pointer;
+    width: 100%;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.landingPageC .detailsC .formC .shippingTypeC select:hover,
+.landingPageC .detailsC .formC .quantityC select:hover,
+.landingPageC .detailsC .formC .regionC select:hover{
+    background-color: var(--hover-color);
+    cursor: pointer;
+}
+.landingPageC .detailsC .formC .shippingTypeC p,
+.landingPageC .detailsC .formC .quantityC p,
+.landingPageC .detailsC .formC .regionC p{
+    font-size: .9rem;
+    color: var(--error-color);
+    margin: 0;
+}
+
+/* pay button ********************************************************************************* */
+
+.landingPageC .detailsC .formC .payBtnC{
+    margin: 20px 0 0 0;
+}
+/* invoice */
+.landingPageC .detailsC .formC .payBtnC .invoiceC{
+    margin: 10px 0 0 0;
+    border: var(--border-style);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.landingPageC .detailsC .formC .payBtnC .invoiceC .subtotal{
+    margin: 0;
+    font-size: .9rem;
+    flex: 1 1 33.333%;
+    padding: 5px;
+}
+.landingPageC .detailsC .formC .payBtnC .invoiceC .shipping{
+    margin: 0;
+    font-size: .9rem;
+    flex: 1 1 33.333%;
+    padding: 5px;
+}
+.landingPageC .detailsC .formC .payBtnC .invoiceC .total{
+    margin: 0;
+    font-size: .9rem;
+    flex: 1 1 33.333%;
+    padding: 5px;
+}
+/* button */
+.landingPageC .detailsC .formC .payBtnC .payBtn{
+    padding: 8px 10px;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 0;
+    font-size: 1rem;
+    width: 100%;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.landingPageC .detailsC .formC .payBtnC .payBtn:hover{
+    background-color: var(--dark-blue);
+    cursor: pointer;
+}
+
+
+/* ================================
+   RESPONSIVE BREAKPOINTS
+================================ */
+
+/* Tablets & small laptops */
+@media (max-width: 1024px) {
+
+    .landingPageC{
+        padding: 0 10px;
+        gap: 15px;
+    }
+
+    .landingPageC .imagesC .previewImageC{
+        height: 420px;
+    }
+
+    .landingPageC .imagesC .multipleImagesC{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+/* Mobile & small tablets */
+@media (max-width: 768px) {
+
+    /* Stack main layout */
+    .landingPageC{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .landingPageC .imagesC,
+    .landingPageC .detailsC{
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    /* Image adjustments */
+    .landingPageC .imagesC .previewImageC{
+        height: 300px;
+    }
+
+    .landingPageC .imagesC .multipleImagesC{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Text sizes */
+    .landingPageC .detailsC .name{
+        font-size: 1.1rem;
+    }
+
+    /* Forms: stack double fields */
+    .landingPageC .detailsC .formC .doubleFieldC{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    /* Invoice stack */
+    .landingPageC .detailsC .formC .payBtnC .invoiceC{
+        flex-direction: column;
+    }
+
+    .landingPageC .detailsC .formC .payBtnC .invoiceC p{
+        border: none !important;
+        border-bottom: var(--border-style);
+    }
+
+    .landingPageC .detailsC .formC .payBtnC .invoiceC p:last-child{
+        border-bottom: none;
+    }
+
+    /* phone tablet version */
+    .landingPageC .nameOverImgC{
+        display: block;
+    }
+    .landingPageC .nameOverImgC .category{
+        font-size: 1rem;
+        color: var(--light-text);
+        text-decoration: none;
+        margin: 0;
+    }
+    .landingPageC .nameOverImgC .name{
+        font-size: 1.2rem;
+        margin: 10px 0;
+    }
+    .landingPageC .detailsC .category{
+        font-size: 1rem;
+        color: var(--light-text);
+        text-decoration: none;
+        margin: 0;
+        display: none;
+    }
+    .landingPageC .detailsC .name{
+        font-size: 1.2rem;
+        margin: 10px 0;
+        display: none;
+    }
+
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+
+    .landingPageC{
+        padding: 0 8px;
+    }
+
+    .landingPageC .imagesC .previewImageC{
+        height: 240px;
+    }
+
+    .landingPageC .imagesC .multipleImagesC{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6px;
+    }
+
+    .landingPageC .detailsC .description{
+        font-size: .95rem;
+    }
+
+    .landingPageC .detailsC .formC input,
+    .landingPageC .detailsC .formC select{
+        font-size: .95rem;
+    }
+
+    .landingPageC .detailsC .formC .payBtnC .payBtn{
+        font-size: .95rem;
+        padding: 10px;
+    }
+}
+

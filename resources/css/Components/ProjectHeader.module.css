@@ -1,0 +1,220 @@
+
+.header{
+    background-color: var(--light-blue);
+    display: flex;
+    justify-content: space-between;
+    box-shadow: var(--header-shadow);
+    height: 50px;
+    padding: 0 32px;
+    position: relative;
+
+    /* smart header on scroll style (ai generated) */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: transform 0.3s ease;
+    z-index: 999;
+}
+
+/* logo  */
+
+.header .logoC img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.header .multipleItemC{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* language  */
+
+.header .multipleItemC select{
+    height: 32px;
+    padding: 0 5px;
+    font-size: .85rem;
+    border-radius: 5px;
+    background-color: #ffffff;
+    cursor: pointer;
+    border-width: 0;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.header .multipleItemC select:hover{
+    background-color: var(--hover-color);
+}
+
+/* account */
+
+.header .multipleItemC .accountIcon{
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    background-color: #ffffff;
+    padding: 8px;
+    border-radius: 5px;
+    color: var(--light-black);
+
+    /* disable selection (ai generated)  */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none;     /* IE 10+ */
+    user-select: none;
+}
+.header .multipleItemC .accountIcon:hover {
+    color: var(--dark-black);
+    background-color: var(--hover-color);
+}
+
+/* options */
+
+.header .optionsC{
+    position: absolute;
+    top: 60px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: var(--header-shadow);
+    padding: 10px;
+    z-index: 999;
+}
+
+.header .optionsC .userC{
+    margin-bottom: 5px;
+    display: flex;
+    gap: 10px;
+    cursor: default;
+}
+.header .optionsC .userC .avatarC{
+    display: flex;
+    align-items: center;
+}
+.header .optionsC .userC .avatarC img{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+.header .optionsC .userC .infoC .userFullName{
+    font-size: .95rem;
+    margin: 0;
+    font-weight: bolder;
+}
+.header .optionsC .userC .infoC .userEmail{
+    font-size: .8rem;
+    color: var(--light-text);
+    margin: 0;
+}
+
+.header .optionsC .navOptionC .navOption{
+    font-size: .9rem;
+    text-decoration: none;
+    color: var(--light-black);
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+.header .optionsC .navOptionC .navOption:hover{
+    background-color: var(--hover-color);
+}
+
+/* logout  */
+
+.header .optionsC .logoutForm .logoutBtn{
+    background-color: var(--light-blue);
+    padding: 2px 10px;
+    width: 100%;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 0;
+    font-size: .9rem;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.header .optionsC .logoutForm .logoutBtn:hover{
+    background-color: var(--dark-blue);
+    cursor: pointer;
+}
+
+/* flash messages */
+
+.header .flashSuccess {
+    background-color: var(--light-blue);
+    color: #ffffff;
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 5px 10px;
+    display: inline-block;
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    box-shadow: var(--header-shadow);
+}
+
+.header .flashError {
+    background-color: var(--error-color);
+    color: #ffffff;
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 5px 10px;
+    display: inline-block;
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    box-shadow: var(--header-shadow);
+}
+
+
+/* responsive *************************************************************** */
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0 16px;
+    }
+
+    .header .logoC img {
+        width: 36px;
+        height: 36px;
+        margin: 7px;
+    }
+
+    .header .multipleItemC {
+        gap: 8px;
+    }
+
+    .header .multipleItemC select {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 0 10px;
+    }
+
+    .header .multipleItemC {
+        gap: 6px;
+    }
+
+    .header .flashSuccess,
+    .header .flashError {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        max-width: 90%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+}

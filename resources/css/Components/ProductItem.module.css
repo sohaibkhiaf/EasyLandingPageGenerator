@@ -1,0 +1,117 @@
+.productC{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    border: var(--border-style);
+    flex: 0 0 calc(33% - 20px); 
+    box-shadow: var(--body-shadow);
+    display: flex;
+    flex-direction: column; 
+    overflow: hidden; 
+}
+
+/* image */
+.productC .imageC{
+    position: relative;
+}
+.productC .imageC img{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.productC .imageC .actionsC{
+    position: absolute;
+    top: 7px;
+    background-color: hsla(0, 0%, 0%, 0.3);
+    padding: 10px 2px;
+    border-radius: 10px;
+}
+.productC .imageC .actionsC
+.actionIcon{
+    color: #ffffff;
+    cursor: pointer;
+    opacity: .9;
+    display: block;
+}
+.productC .imageC .actionsC
+.actionIcon:first-child{
+    margin-bottom: 12px;
+}
+.productC .imageC .actionsC
+.actionIcon:hover{
+    opacity: 1;
+}
+
+/* product information */
+
+.productC .nameC {
+    font-size: 1rem;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    word-break: break-word;
+}
+.productC .categoryC {
+    font-size: .95rem;
+    color: var(--light-black);
+}
+.productC .descC {
+    font-size: .95rem;
+    width: 100%;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    word-break: break-word;
+}
+.productC .stockC {
+    font-size: .95rem;
+}
+.productC .priceC {
+    font-size: .95rem;
+}
+.productC .priceC .discount {
+    font-size: .9rem;
+    text-decoration: line-through;
+    color: var(--light-text);
+}
+.productC .enabledC{
+    font-size: .95rem;
+}
+
+
+/* ================= RESPONSIVE SHIPPING FORM ================= */
+
+/* Large tablets */
+@media (max-width: 1200px) {
+    .productC {
+        flex: 0 0 calc(33% - 20px); /* 2 cards per row */
+    }
+}
+
+/* Tablets & small laptops */
+@media (max-width: 900px) {
+    .productC {
+        flex: 0 0 calc(50% - 10px);
+    }
+
+}
+
+/* Mobile & small tablets */
+@media (max-width: 768px) {
+    .productC {
+        flex: 0 0 100%; /*1 card per row */
+        padding: 12px;
+    }
+
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .productC {
+        flex: 0 0 100%; /*1 card per row */
+        padding: 10px;
+    }
+
+}
+

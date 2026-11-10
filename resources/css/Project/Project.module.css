@@ -1,0 +1,252 @@
+
+.projectC{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    border: var(--border-style);
+    box-shadow: var(--body-shadow);
+}
+
+.projectC .projectHeader{
+    margin: 0 0 20px 0;
+}
+
+/* product form  */
+
+.projectC .projectForm .doubleFieldC{
+    display: flex;
+    gap: 10px;
+}
+.projectC .projectForm .doubleFieldC .categoryC,
+.projectC .projectForm .doubleFieldC .metaPixelC,
+.projectC .projectForm .doubleFieldC .defaultLanguageC{
+    flex: 0 0 50%;
+}
+
+.projectC .projectForm .nameC label,
+.projectC .projectForm .slugC label,
+.projectC .projectForm .categoryC label,
+.projectC .projectForm .descC label,
+.projectC .projectForm .priceC label,
+.projectC .projectForm .metaPixelC label,
+.projectC .projectForm .defaultLanguageC label,
+.projectC .projectForm .discountC label,
+.projectC .projectForm .stockC label,
+.projectC .projectForm .maxQuantityC label{
+    display: block;
+    font-size: .9rem;
+    margin: 10px 0 5px 0;
+}
+.projectC .projectForm .slugC .copyIcon{
+    cursor: pointer;
+}
+.projectC .projectForm .slugC .copyIcon:hover{
+    color: var(--dark-black);
+}
+.projectC .projectForm .nameC input,
+.projectC .projectForm .slugC input,
+.projectC .projectForm .categoryC input,
+.projectC .projectForm .descC textarea,
+.projectC .projectForm .priceC input,
+.projectC .projectForm .metaPixelC input,
+.projectC .projectForm .defaultLanguageC select,
+.projectC .projectForm .discountC input,
+.projectC .projectForm .stockC input,
+.projectC .projectForm .maxQuantityC input{
+    font-size: 1rem;
+    padding: 8px 10px;
+    border: var(--border-style);
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.projectC .projectForm .descC textarea{
+    resize: none;
+    height: 200px;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.projectC .projectForm .slugC input{
+    font-size: 1rem;
+    padding: 8px 10px;
+    border: var(--border-style);
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+.projectC .projectForm .nameC input:hover,
+.projectC .projectForm .categoryC input:hover,
+.projectC .projectForm .descC textarea:hover,
+.projectC .projectForm .priceC input:hover,
+.projectC .projectForm .metaPixelC input:hover,
+.projectC .projectForm .defaultLanguageC select:hover,
+.projectC .projectForm .discountC input:hover,
+.projectC .projectForm .stockC input:hover,
+.projectC .projectForm .maxQuantityC input:hover{
+    background-color: var(--hover-color);
+}
+.projectC .projectForm .nameC input:focus,
+.projectC .projectForm .categoryC input:focus,
+.projectC .projectForm .descC textarea:focus,
+.projectC .projectForm .priceC input:focus,
+.projectC .projectForm .metaPixelC input:focus,
+.projectC .projectForm .defaultLanguageC select:focus,
+.projectC .projectForm .discountC input:focus,
+.projectC .projectForm .stockC input:focus,
+.projectC .projectForm .maxQuantityC input:focus{
+    background-color: var(--hover-color);
+}
+.projectC .projectForm .nameC p,
+.projectC .projectForm .categoryC p,
+.projectC .projectForm .descC p,
+.projectC .projectForm .priceC p,
+.projectC .projectForm .metaPixelC p,
+.projectC .projectForm .defaultLanguageC p,
+.projectC .projectForm .discountC p,
+.projectC .projectForm .stockC p,
+.projectC .projectForm .maxQuantityC p{
+    font-size: .9rem;
+    color: var(--error-color);
+    margin: 0;
+}
+
+.projectC .projectForm .trackStockC{
+    margin-top: 10px;
+}
+.projectC .projectForm .trackStockC label{
+    font-size: 1rem;
+    margin: 10px 0 5px 0;
+}
+.projectC .projectForm .trackStockC label input{
+    width: 15px;
+    height: 15px;
+    accent-color: var(--light-blue) ;
+    cursor: pointer;
+}
+
+
+/* action buttons  */
+
+.projectC .projectForm .actionBtnsC{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* update button */
+
+.projectC .projectForm .actionBtnsC .updateBtn{
+    background-color: var(--light-blue);
+    padding: 5px 10px;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    font-size: .9rem;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.projectC .projectForm .actionBtnsC .updateBtn:hover{
+    background-color: var(--dark-blue);
+    cursor: pointer;
+}
+.projectC .projectForm .actionBtnsC .updateBtn:disabled{
+    background-color: #ffffff;
+    color: var(--light-black);
+    border: var(--border-style);
+    cursor: default;
+}
+
+/* delete button */
+
+.projectC .projectForm .actionBtnsC .deleteBtn{
+    background-color: hsl(0, 92%, 40%);
+    padding: 5px 10px;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    font-size: .9rem;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.projectC .projectForm .actionBtnsC .deleteBtn:hover{
+    background-color:hsl(0, 92%, 30%);
+    cursor: pointer;
+}
+
+
+/* ================= RESPONSIVE PROJECT FORM ================= */
+
+/* Mobile & small tablets */
+@media (max-width: 768px) {
+
+    /* Stack all double fields */
+    .projectC .projectForm .doubleFieldC {
+        flex-direction: column;
+    }
+
+    .projectC .projectForm .doubleFieldC > div {
+        flex: 1 0 100%;
+    }
+
+    .projectC .projectForm textarea {
+        height: 160px;
+    }
+
+    /* Action buttons full width */
+    .projectC .projectForm .actionBtnsC {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .projectC .projectForm .actionBtnsC button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+
+    .projectC {
+        padding: 12px;
+    }
+
+    .projectC .projectHeader {
+        font-size: 1.2rem;
+    }
+
+    .projectC .projectForm label {
+        font-size: 0.85rem;
+    }
+
+    .projectC .projectForm input,
+    .projectC .projectForm textarea {
+        font-size: 0.95rem;
+        padding: 8px;
+    }
+
+    .projectC .projectForm .trackStockC label {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+}
+
+
+
+

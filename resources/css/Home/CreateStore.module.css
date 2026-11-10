@@ -1,0 +1,197 @@
+
+.createStoreC{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    border: var(--border-style);
+}
+
+.createStoreC .createStoreHeader{
+    margin: 0 0 20px 0;
+}
+
+/* create project form  */
+
+.createStoreC .createStoreForm .doubleFieldC {
+    display: flex;
+    gap: 10px;
+}
+.createStoreC .createStoreForm .doubleFieldC .headlineC{
+    flex: 0 0 100%;
+}
+.createStoreC .createStoreForm .doubleFieldC .metaPixelC{
+    flex: 0 0 50%;
+}
+
+.createStoreC .createStoreForm .nameC label,
+.createStoreC .createStoreForm .headlineC label,
+.createStoreC .createStoreForm .subheadlineC label,
+.createStoreC .createStoreForm .metaPixelC label,
+.createStoreC .createStoreForm .slugC label{
+    display: block;
+    font-size: .9rem;
+    margin: 10px 0 5px 0;
+}
+.createStoreC .createStoreForm .nameC input,
+.createStoreC .createStoreForm .headlineC input,
+.createStoreC .createStoreForm .subheadlineC textarea,
+.createStoreC .createStoreForm .metaPixelC input,
+.createStoreC .createStoreForm .slugC input{
+    font-size: 1rem;
+    padding: 8px 10px;
+    border: var(--border-style);
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.createStoreC .createStoreForm .subheadlineC textarea{
+    resize: none;
+    height: 200px;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.createStoreC .createStoreForm .nameC input:hover,
+.createStoreC .createStoreForm .headlineC input:hover,
+.createStoreC .createStoreForm .subheadlineC textarea:hover,
+.createStoreC .createStoreForm .metaPixelC input:hover,
+.createStoreC .createStoreForm .slugC input:hover{
+    background-color: var(--hover-color);
+}
+.createStoreC .createStoreForm .nameC input:focus,
+.createStoreC .createStoreForm .headlineC input:focus,
+.createStoreC .createStoreForm .subheadlineC textarea:focus,
+.createStoreC .createStoreForm .metaPixelC input:focus,
+.createStoreC .createStoreForm .slugC input:focus{
+    background-color: var(--hover-color);
+}
+.createStoreC .createStoreForm .nameC p,
+.createStoreC .createStoreForm .headlineC p,
+.createStoreC .createStoreForm .subheadlineC p,
+.createStoreC .createStoreForm .metaPixelC p,
+.createStoreC .createStoreForm .slugC p{
+    font-size: .9rem;
+    color: var(--error-color);
+    margin: 0;
+}
+.createStoreC .createStoreForm .slugC .slugWarning{
+    font-size: .9rem;
+    margin: 0;
+    color: var(--light-black);
+}
+
+
+/* store icon  */
+
+.createStoreC .createStoreForm .iconPickerC label{
+    display: block;
+    font-size: .9rem;
+    margin: 10px 0 5px 0;
+}
+
+.createStoreC .createStoreForm .iconPickerC .iconC {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.createStoreC .createStoreForm .iconPickerC .iconC img{
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    cursor: pointer;
+    object-fit: cover;
+}
+.createStoreC .createStoreForm .iconPickerC .iconC img:hover{
+    opacity: .9;
+}
+
+.createStoreC .createStoreForm .iconPickerC p{
+    font-size: .9rem;
+    color: var(--error-color);
+    margin: 0;
+}
+
+/* create button  */
+
+.createStoreC .createStoreForm .createBtnC{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+.createStoreC .createStoreForm .createBtnC .createBtn{
+    background-color: var(--light-blue);
+    padding: 5px 10px;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 0;
+    font-size: .9rem;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.createStoreC .createStoreForm .createBtnC .createBtn:hover{
+    background-color: var(--dark-blue);
+    cursor: pointer;
+}
+
+/* ================== RESPONSIVE STYLES ================== */
+
+@media (max-width: 768px) {
+    /* Stack doubleFieldC inputs vertically on tablets and small screens */
+    .createStoreC .createStoreForm .doubleFieldC {
+        flex-direction: column;
+    }
+
+    /* Project icon resize */
+    .createStoreC .createStoreForm .iconPickerC .iconC img {
+        width: 70px;
+        height: 70px;
+    }
+
+    /* Create button full width */
+    .createStoreC .createStoreForm .createBtnC .createBtn {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+    /* Reduce padding on mobile */
+    .createStoreC {
+        padding: 15px;
+    }
+
+    /* Reduce header size */
+    .createStoreC .createStoreHeader {
+        font-size: 1.3rem;
+    }
+
+    /* Inputs, textarea full width is already set,
+    adjust height for description */
+    .createStoreC .createStoreForm .subheadlineC textarea {
+        height: 150px;
+    }
+
+    /* Smaller icon on mobile */
+    .createStoreC .createStoreForm .iconPickerC .iconC img {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* Create button full width */
+    .createStoreC .createStoreForm .createBtnC .createBtn {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+}

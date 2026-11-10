@@ -1,0 +1,280 @@
+
+.mainC {
+    background-color: #ffffff;
+    border: var(--border-style);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: var(--body-shadow);
+}
+
+/* header ************************************************************************** */
+
+.mainC .headerC {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+/* hero section */
+
+.mainC .headerC .heroSectionC {
+    flex: 1 1 60%;
+}
+
+/* headline */
+.mainC .headerC .heroSectionC .headline {
+    font-size: 2.6rem;
+    margin: 0 0 20px 0;
+    line-height: 54px;
+}
+/* subheadline */
+.mainC .headerC .heroSectionC .subheadline{
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+/* features  */
+.mainC .headerC .heroSectionC .featuresC{
+    margin-bottom: 20px;
+}
+.mainC .headerC .heroSectionC .featuresC .feature{
+    margin-bottom: 10px;
+}
+.mainC .headerC .heroSectionC .featuresC .feature h4{
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* call to action */
+.mainC .headerC .heroSectionC .cta{
+    background-color: var(--light-blue);
+    padding: 5px 10px;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-decoration: none;
+}
+.mainC .headerC .heroSectionC .cta:hover {
+    background-color: var(--dark-blue);
+    cursor: pointer;
+}
+
+/* side image */
+
+.mainC .headerC .sideImageC {
+    flex: 1 1 40%;
+}
+
+.mainC .headerC .sideImageC .imageC{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+.mainC .headerC .sideImageC .imageC img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* how does it work ****************************************************************** */
+
+.mainC .howC {
+    text-align: center;
+    padding: 0 20px 20px;
+    border-radius: 10px;
+}
+
+/* question */
+.mainC .howC .howQuestion {
+    font-size: 1.6rem;
+}
+/* steps */
+.mainC .howC .stepsC {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+.mainC .howC .stepsC .step {
+    border: var(--border-style);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: var(--body-shadow);
+}
+.mainC .howC .stepsC .step p{
+    font-size: 1rem;
+}
+.mainC .howC .stepsC .step .stepIcon{
+    font-size: 2rem;
+}
+
+/* features ************************************************************* */
+
+.mainC .featureSimpleC,
+.mainC .featureReadyC,
+.mainC .featureCostC {
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    gap: 50px;
+}
+
+/* text */
+.mainC .featureSimpleC .featureSimple,
+.mainC .featureReadyC .featureReady,
+.mainC .featureCostC .featureCost{
+    flex: 1 1 60%;
+}
+.mainC .featureSimpleC .featureSimple h4,
+.mainC .featureReadyC .featureReady h4 ,
+.mainC .featureCostC .featureCost h4 {
+    font-size: 2rem;
+    margin: 0;
+}
+.mainC .featureSimpleC .featureSimple p,
+.mainC .featureReadyC .featureReady p,
+.mainC .featureCostC .featureCost p{
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* image */
+.mainC .featureSimpleC .featureImageC,
+.mainC .featureReadyC .featureImageC,
+.mainC .featureCostC .featureImageC {
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+}
+.mainC .featureSimpleC .featureImageC .imageC,
+.mainC .featureReadyC .featureImageC .imageC,
+.mainC .featureCostC .featureImageC .imageC{
+    display: flex;
+    width: 80%;
+    overflow: hidden;
+}
+.mainC .featureSimpleC .featureImageC .imageC img,
+.mainC .featureReadyC .featureImageC .imageC img,
+.mainC .featureCostC .featureImageC .imageC img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ready feature: mobile / desktop variants */
+.mainC .featureReadyC .featureReadyMobile {
+    display: none;
+}
+
+.mainC .featureReadyC .featureReadyDesktop {
+    display: block;
+}
+
+
+/* responsive ******************************************************************** */
+
+/* tablets and below */
+@media (max-width: 768px) {
+    /* header: stack columns */
+    .mainC .headerC {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .mainC .headerC .heroSectionC,
+    .mainC .headerC .sideImageC {
+        flex: 1 1 100%;
+    }
+
+    .mainC .headerC .heroSectionC .headline {
+        font-size: 2.2rem;
+        line-height: 1.3;
+    }
+
+    /* how section: extra spacing and 2 steps per row */
+    .mainC .howC {
+        margin-bottom: 30px;
+    }
+
+    .mainC .howC .stepsC {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* features: stack text and image */
+    .mainC .featureSimpleC,
+    .mainC .featureReadyC,
+    .mainC .featureCostC {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 20px;
+        gap: 25px;
+    }
+
+    .mainC .featureSimpleC .featureSimple,
+    .mainC .featureReadyC .featureReady,
+    .mainC .featureCostC .featureCost,
+    .mainC .featureSimpleC .featureImageC,
+    .mainC .featureReadyC .featureImageC,
+    .mainC .featureCostC .featureImageC {
+        flex: 1 1 100%;
+    }
+
+    .mainC .featureSimpleC .featureImageC .imageC,
+    .mainC .featureReadyC .featureImageC .imageC,
+    .mainC .featureCostC .featureImageC .imageC {
+        width: 100%;
+    }
+
+    /* ready feature visibility on tablets / small screens */
+    .mainC .featureReadyC .featureReadyMobile {
+        display: block;
+    }
+
+    .mainC .featureReadyC .featureReadyDesktop {
+        display: none;
+    }
+}
+
+/* small mobile */
+@media (max-width: 480px) {
+    .mainC {
+        padding: 15px;
+    }
+
+    .mainC .headerC {
+        margin-bottom: 30px;
+    }
+
+    .mainC .headerC .heroSectionC .headline {
+        font-size: 1.8rem;
+    }
+
+    .mainC .headerC .heroSectionC .subheadline {
+        font-size: 0.95rem;
+    }
+
+    .mainC .howC {
+        padding: 0 10px 10px;
+        margin-bottom: 25px;
+    }
+
+    .mainC .howC .stepsC {
+        grid-template-columns: 1fr;
+    }
+
+    .mainC .featureSimpleC,
+    .mainC .featureReadyC,
+    .mainC .featureCostC {
+        padding: 0 10px;
+    }
+
+    .mainC .featureSimpleC .featureSimple h4,
+    .mainC .featureReadyC .featureReady h4,
+    .mainC .featureCostC .featureCost h4 {
+        font-size: 1.6rem;
+    }
+
+    .mainC .featureSimpleC .featureSimple p,
+    .mainC .featureReadyC .featureReady p,
+    .mainC .featureCostC .featureCost p {
+        font-size: 1rem;
+    }
+}
+

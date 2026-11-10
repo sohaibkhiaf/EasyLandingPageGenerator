@@ -1,0 +1,171 @@
+.shippingC{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    border: var(--border-style);
+    flex: 1 1 calc(33.333% - 30px);
+    box-shadow: var(--body-shadow);
+}
+
+/* shipping region  */
+
+.shippingC .shippingRegion{
+    font-size: 1rem;
+}
+
+/* shipping form  */
+
+.shippingC .shippingForm .deskC label,
+.shippingC .shippingForm .homeC label{
+    display: block;
+    font-size: .9rem;
+    margin: 10px 0 5px 0;
+}
+.shippingC .shippingForm .deskC input,
+.shippingC .shippingForm .homeC input{
+    font-size: .9rem;
+    padding: 5px 8px;
+    border: var(--border-style);
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.shippingC .shippingForm .deskC input:hover,
+.shippingC .shippingForm .homeC input:hover{
+    background-color: var(--hover-color);
+}
+.shippingC .shippingForm .deskC input:focus,
+.shippingC .shippingForm .homeC input:focus{
+    background-color: var(--hover-color);
+}
+.shippingC .shippingForm .deskC p,
+.shippingC .shippingForm .homeC p{
+    font-size: .8rem;
+    color: var(--error-color);
+    margin: 0;
+}
+
+.shippingC .shippingForm .enabledC{
+    margin-top: 10px;
+}
+.shippingC .shippingForm .enabledC label{
+    font-size: .9rem;
+    margin: 10px 0 5px 0;
+}
+.shippingC .shippingForm .enabledC label input{
+    width: 15px;
+    height: 15px;
+    accent-color: var(--light-blue) ;
+    cursor: pointer;
+}
+
+/* update shipping button  */
+
+.shippingC .shippingForm .updateBtnC{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+.shippingC .shippingForm .updateBtnC .updateBtn{
+    background-color: var(--light-blue);
+    padding: 5px 10px;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    font-size: .85rem;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.shippingC .shippingForm .updateBtnC .updateBtn:hover{
+    background-color: var(--dark-blue);
+    cursor: pointer;
+}
+.shippingC .shippingForm .updateBtnC .updateBtn:disabled{
+    background-color: var(--hover-color);
+    cursor: text;
+    color: var(--light-black);
+    border: var(--border-style);
+}
+
+
+/* ================= RESPONSIVE SHIPPING FORM ================= */
+
+/* Large tablets */
+@media (max-width: 1200px) {
+    .shippingC {
+        flex: 1 1 calc(50% - 20px); /* 2 cards per row */
+    }
+}
+
+/* Tablets & small laptops */
+@media (max-width: 900px) {
+    .shippingC {
+        flex: 1 1 calc(50% - 10px);
+    }
+
+    .shippingC .shippingRegion {
+        font-size: 0.95rem;
+    }
+}
+
+/* Mobile & small tablets */
+@media (max-width: 768px) {
+    .shippingC {
+        flex: 1 1 100%; /* 1 card per row */
+        padding: 12px;
+    }
+
+    .shippingC .shippingRegion {
+        text-align: center;
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+
+    /* Inputs bigger for touch */
+    .shippingC .shippingForm .deskC input,
+    .shippingC .shippingForm .homeC input {
+        font-size: 1rem;
+        padding: 8px 10px;
+    }
+
+    /* Enabled checkbox spacing */
+    .shippingC .shippingForm .enabledC {
+        margin-top: 12px;
+    }
+
+    /* Update button full width */
+    .shippingC .shippingForm .updateBtnC {
+        justify-content: stretch;
+    }
+
+    .shippingC .shippingForm .updateBtnC .updateBtn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .shippingC {
+        padding: 10px;
+    }
+
+    .shippingC .shippingRegion {
+        font-size: 0.95rem;
+    }
+
+    .shippingC .shippingForm .deskC label,
+    .shippingC .shippingForm .homeC label,
+    .shippingC .shippingForm .enabledC label {
+        font-size: 0.85rem;
+    }
+}
+

@@ -1,0 +1,131 @@
+
+/* Base account container styles */
+.accountC {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    border: var(--border-style);
+    box-shadow: var(--body-shadow);
+}
+
+/* Header */
+.accountC .accountHeader {
+    margin: 0 0 20px 0;
+    font-size: 1.5rem;
+}
+
+/* Account info subheader */
+.accountC .accountInfoHeader {
+    margin: 5px 0 15px 0;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+/* Form fields wrapper */
+.accountC .accountInfoForm .doubleFieldC {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* allow wrapping on small screens */
+}
+
+.accountC .accountInfoForm .doubleFieldC div {
+    flex: 1 1 48%; /* flexible but keep two per row if possible */
+    min-width: 200px; /* ensure inputs don’t shrink too much */
+}
+
+/* Labels */
+.accountC .accountInfoForm label {
+    display: block;
+    font-size: .9rem;
+    margin: 10px 0 5px 0;
+}
+
+/* Inputs */
+.accountC .accountInfoForm input,
+.accountC .accountInfoForm select {
+    font-size: 1rem;
+    padding: 8px 10px;
+    border: var(--border-style);
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+}
+
+/* Input hover/focus */
+.accountC .accountInfoForm input:hover,
+.accountC .accountInfoForm select:hover,
+.accountC .accountInfoForm input:focus,
+.accountC .accountInfoForm select:focus {
+    background-color: var(--hover-color);
+}
+
+/* Error messages */
+.accountC .accountInfoForm p {
+    font-size: .9rem;
+    color: var(--error-color);
+    margin: 0;
+}
+
+/* Update button */
+.accountC .updateBtnC {
+    display: flex;
+    justify-content: flex-end;
+}
+.accountC .updateBtn {
+    background-color: var(--light-blue);
+    padding: 5px 10px;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    font-size: .9rem;
+    margin-top: 20px;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.accountC .updateBtn:hover {
+    background-color: var(--dark-blue);
+    cursor: pointer;
+}
+.accountC .updateBtn:disabled {
+    background-color: #ffffff;
+    color: var(--light-black);
+    border: var(--border-style);
+    cursor: default;
+}
+
+/* ================== RESPONSIVE STYLES ================== */
+@media (max-width: 768px) {
+    .accountC .accountInfoForm .doubleFieldC {
+        flex-direction: column; /* stack fields vertically */
+        gap: 15px;
+    }
+
+    .accountC .updateBtn {
+        width: 100%; /* button full width */
+    }
+}
+
+@media (max-width: 480px) {
+    .accountC {
+        padding: 15px;
+    }
+
+    .accountC .accountHeader {
+        font-size: 1.3rem;
+    }
+
+    .accountC .accountInfoHeader {
+        font-size: .95rem;
+    }
+
+    .accountC .updateBtn {
+        width: 100%; /* button full width */
+    }
+}
+

@@ -1,0 +1,233 @@
+
+.createPjtC{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    border: var(--border-style);
+}
+
+.createPjtC .createPjtHeader{
+    margin: 0 0 20px 0;
+}
+
+/* create project form  */
+
+.createPjtC .createPjtForm .doubleFieldC {
+    display: flex;
+    gap: 10px;
+}
+.createPjtC .createPjtForm .doubleFieldC .stockC,
+.createPjtC .createPjtForm .doubleFieldC .metaPixelC,
+.createPjtC .createPjtForm .doubleFieldC .categoryC{
+    flex: 0 0 50%;
+}
+.createPjtC .createPjtForm .nameC label,
+.createPjtC .createPjtForm .categoryC label,
+.createPjtC .createPjtForm .descriptionC label,
+.createPjtC .createPjtForm .priceC label,
+.createPjtC .createPjtForm .discountC label,
+.createPjtC .createPjtForm .stockC label,
+.createPjtC .createPjtForm .metaPixelC label,
+.createPjtC .createPjtForm .slugC label{
+    display: block;
+    font-size: .9rem;
+    margin: 10px 0 5px 0;
+}
+.createPjtC .createPjtForm .nameC input,
+.createPjtC .createPjtForm .categoryC input,
+.createPjtC .createPjtForm .descriptionC textarea,
+.createPjtC .createPjtForm .priceC input,
+.createPjtC .createPjtForm .discountC input,
+.createPjtC .createPjtForm .stockC input,
+.createPjtC .createPjtForm .metaPixelC input,
+.createPjtC .createPjtForm .slugC input{
+    font-size: 1rem;
+    padding: 8px 10px;
+    border: var(--border-style);
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.createPjtC .createPjtForm .descriptionC textarea{
+    resize: none;
+    height: 200px;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.createPjtC .createPjtForm .nameC input:hover,
+.createPjtC .createPjtForm .categoryC input:hover,
+.createPjtC .createPjtForm .descriptionC textarea:hover,
+.createPjtC .createPjtForm .priceC input:hover,
+.createPjtC .createPjtForm .discountC input:hover,
+.createPjtC .createPjtForm .stockC input:hover,
+.createPjtC .createPjtForm .metaPixelC input:hover,
+.createPjtC .createPjtForm .slugC input:hover{
+    background-color: var(--hover-color);
+}
+.createPjtC .createPjtForm .nameC input:focus,
+.createPjtC .createPjtForm .categoryC input:focus,
+.createPjtC .createPjtForm .descriptionC textarea:focus,
+.createPjtC .createPjtForm .priceC input:focus,
+.createPjtC .createPjtForm .discountC input:focus,
+.createPjtC .createPjtForm .stockC input:focus,
+.createPjtC .createPjtForm .metaPixelC input:focus,
+.createPjtC .createPjtForm .slugC input:focus{
+    background-color: var(--hover-color);
+}
+.createPjtC .createPjtForm .nameC p,
+.createPjtC .createPjtForm .categoryC p,
+.createPjtC .createPjtForm .descriptionC p,
+.createPjtC .createPjtForm .priceC p,
+.createPjtC .createPjtForm .discountC p,
+.createPjtC .createPjtForm .stockC p,
+.createPjtC .createPjtForm .metaPixelC p,
+.createPjtC .createPjtForm .slugC p{
+    font-size: .9rem;
+    color: var(--error-color);
+    margin: 0;
+}
+.createPjtC .createPjtForm .slugC .slugWarning{
+    font-size: .9rem;
+    margin: 0;
+    color: var(--light-black);
+}
+
+.createPjtC .createPjtForm .trackStockC{
+    margin-top: 10px;
+}
+.createPjtC .createPjtForm .trackStockC label{
+    font-size: 1rem;
+    margin: 10px 0 5px 0;
+}
+.createPjtC .createPjtForm .trackStockC label input{
+    width: 15px;
+    height: 15px;
+    accent-color: var(--light-blue) ;
+    cursor: pointer;
+}
+
+/* project icon  */
+
+.createPjtC .createPjtForm .iconPickerC label{
+    display: block;
+    font-size: .9rem;
+    margin: 10px 0 5px 0;
+}
+
+.createPjtC .createPjtForm .iconPickerC .iconC {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.createPjtC .createPjtForm .iconPickerC .iconC img{
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    cursor: pointer;
+    object-fit: cover;
+}
+.createPjtC .createPjtForm .iconPickerC .iconC img:hover{
+    opacity: .9;
+}
+
+.createPjtC .createPjtForm .iconPickerC p{
+    font-size: .9rem;
+    color: var(--error-color);
+    margin: 0;
+}
+
+/* create button  */
+
+.createPjtC .createPjtForm .createBtnC{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+.createPjtC .createPjtForm .createBtnC .createBtn{
+    background-color: var(--light-blue);
+    padding: 5px 10px;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 0;
+    font-size: .9rem;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.createPjtC .createPjtForm .createBtnC .createBtn:hover{
+    background-color: var(--dark-blue);
+    cursor: pointer;
+}
+
+/* ================== RESPONSIVE STYLES ================== */
+
+@media (max-width: 768px) {
+    /* Stack doubleFieldC inputs vertically on tablets and small screens */
+    .createPjtC .createPjtForm .doubleFieldC {
+        flex-direction: column;
+    }
+
+    /* Project icon resize */
+    .createPjtC .createPjtForm .iconPickerC .iconC img {
+        width: 70px;
+        height: 70px;
+    }
+
+    /* Track quantity checkbox adjustments */
+    .createPjtC .createPjtForm .trackStockC label {
+        font-size: 0.95rem;
+    }
+
+    /* Create button full width */
+    .createPjtC .createPjtForm .createBtnC .createBtn {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+    /* Reduce padding on mobile */
+    .createPjtC {
+        padding: 15px;
+    }
+
+    /* Reduce header size */
+    .createPjtC .createPjtHeader {
+        font-size: 1.3rem;
+    }
+
+    /* Inputs, textarea full width is already set,
+    adjust height for description */
+    .createPjtC .createPjtForm .descriptionC textarea {
+        height: 150px;
+    }
+
+    /* Smaller icon on mobile */
+    .createPjtC .createPjtForm .iconPickerC .iconC img {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* Create button full width */
+    .createPjtC .createPjtForm .createBtnC .createBtn {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    /* Adjust track quantity checkbox */
+    .createPjtC .createPjtForm .trackStockC label input {
+        width: 12px;
+        height: 12px;
+    }
+}

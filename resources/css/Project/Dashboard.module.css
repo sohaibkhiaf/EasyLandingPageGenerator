@@ -1,0 +1,129 @@
+
+.dashboardC{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    border: var(--border-style);
+    box-shadow: var(--body-shadow);
+}
+
+.dashboardC .dashboardHeader{
+    margin: 0 0 20px 0;
+}
+
+/* statistics  */
+
+.dashboardC .statsC{
+    display: flex;
+    border: var(--border-style);
+    border-radius: 10px;
+    box-shadow: var(--body-shadow);
+
+    /* disable selection (ai generated)  */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none;     /* IE 10+ */
+    user-select: none;
+}
+
+/* orders  */
+
+.dashboardC .statsC .ordersC{
+    flex: 50%;
+    padding: 10px;
+}
+
+.dashboardC .statsC .ordersC .ordersHeader{
+    font-weight: bolder;
+    font-size: .8rem;
+    color: var(--light-text);
+    margin-bottom: 10px;
+}
+
+.dashboardC .statsC .ordersC .statsLabelC{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.dashboardC .statsC .ordersC .statsLabelC p{
+    margin: 0;
+    font-size: 1.1rem;
+    padding: 0;
+}
+
+/* earnings  */
+
+.dashboardC .statsC .earningsC{
+    flex: 50%;
+    padding: 10px ;
+}
+
+.dashboardC .statsC .earningsC .earningsHeader{
+    font-weight: bolder;
+    font-size: .8rem;
+    color: var(--light-text);
+    margin-bottom: 10px;
+}
+
+.dashboardC .statsC .earningsC .statsLabelC{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.dashboardC .statsC .earningsC .statsLabelC p{
+    margin: 0;
+    font-size: 1.1rem;
+    padding: 0;
+}
+
+
+/* ================= RESPONSIVE DASHBOARD ================= */
+
+
+/* Mobile & small tablets */
+@media (max-width: 768px) {
+    .dashboardC .statsC {
+        flex-direction: column;
+    }
+
+    /* Remove vertical divider when stacked */
+    .dashboardC .statsC .earningsC {
+        border: none !important;
+        padding-top: 15px;
+    }
+
+    .dashboardC .statsC .ordersC {
+        border-bottom: var(--border-style);
+        padding-bottom: 15px;
+    }
+
+    .dashboardC .statsC .ordersC .statsLabelC,
+    .dashboardC .statsC .earningsC .statsLabelC {
+        gap: 10px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .dashboardC {
+        padding: 12px;
+    }
+
+    .dashboardC .dashboardHeader {
+        font-size: 1.2rem;
+    }
+
+    .dashboardC .statsC {
+        border-radius: 8px;
+    }
+
+    .dashboardC .statsC .ordersC .ordersHeader,
+    .dashboardC .statsC .earningsC .earningsHeader {
+        font-size: 0.75rem;
+        text-align: center;
+    }
+
+    .dashboardC .statsC .statsLabelC p {
+        font-size: 0.95rem;
+    }
+}

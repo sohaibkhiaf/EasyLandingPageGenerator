@@ -1,0 +1,110 @@
+
+
+.header{
+    background-color: var(--light-blue);
+    display: flex;
+    justify-content: space-between;
+    box-shadow: var(--header-shadow);
+    height: 50px;
+    padding: 0 32px;
+}
+
+/* logo */
+
+.header .logoC img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* language */
+
+.header .langC{
+    display: flex;
+    align-items: center;
+}
+
+.header .langC select{
+    height: 32px;
+    padding: 0 5px;
+    font-size: .85rem;
+    border-radius: 5px;
+    background-color: #ffffff;
+    cursor: pointer;
+    border-width: 0;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.header .langC select:hover{
+    background-color: var(--hover-color);
+}
+
+/* flash messages */
+
+.header .flashSuccess {
+    background-color: var(--light-blue);
+    color: #ffffff;
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 5px 10px;
+    display: inline-block;
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    box-shadow: var(--header-shadow);
+}
+
+.header .flashError {
+    background-color: var(--error-color);
+    color: #ffffff;
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 5px 10px;
+    display: inline-block;
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    box-shadow: var(--header-shadow);
+}
+
+
+/* 📱 Tablets */
+@media (max-width: 768px) {
+    .header {
+        padding: 0 16px;
+    }
+
+    .header .logoC img {
+        width: 36px;
+        height: 36px;
+        margin: 7px;
+    }
+
+    .header .langC select {
+        font-size: .8rem;
+    }
+}
+
+/* 📱 Phones */
+@media (max-width: 480px) {
+    .header {
+        padding: 0 10px;
+    }
+
+    .header .flashError,
+    .header .flashSuccess {
+        font-size: .85rem;
+        top: 55px;
+        right: 50%;
+        transform: translateX(50%);
+        max-width: 90%;
+        text-align: center;
+    }
+}
+
+

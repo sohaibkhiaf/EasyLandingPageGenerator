@@ -1,0 +1,101 @@
+.productC{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    border: var(--border-style);    
+    box-shadow: var(--body-shadow);
+    display: flex; 
+    flex-direction: column; 
+    overflow: hidden; 
+}
+
+/* image */
+.productC .imageC img{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 5px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* product information */
+
+.productC .nameC {
+    font-size: 1rem;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    word-break: break-word;
+}
+.productC .descC {
+    font-size: .95rem;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    word-break: break-word;
+}
+.productC .priceC {
+    font-size: .95rem;
+}
+.productC .priceC .discount {
+    font-size: .9rem;
+    text-decoration: line-through;
+    color: var(--light-text);
+}
+
+/* add to cart button */
+.productC .addToCartBtnC {
+    display: flex;
+    justify-content: center;
+}
+.productC .addToCartBtnC .addToCartBtn {
+    background-color: var(--light-blue);
+    padding: 5px 10px;
+    width: 100%;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    font-size: .9rem;
+    cursor: pointer;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.productC .addToCartBtnC .addToCartBtn:hover{
+    background-color: var(--dark-blue);
+}
+
+/* quantity */
+.productC .quantityC {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.productC .quantityC .decreaseQuantity,
+.productC .quantityC .increaseQuantity{
+    background-color: #ffffff;
+    font-size: .9rem;
+    padding: 5px 8px;
+    border: var(--border-style);
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.productC .quantityC .decreaseQuantity:hover,
+.productC .quantityC .increaseQuantity:hover{
+    background-color: var(--hover-color);
+}
+.productC .quantityC .itemQuantity{
+    font-size: 1rem;
+    text-align: center;
+}
+
+

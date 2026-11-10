@@ -1,0 +1,120 @@
+.ordersC{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    border: var(--border-style);
+    box-shadow: var(--body-shadow);
+}
+
+.ordersC .ordersHeader{
+    margin: 0 0 20px 0;
+}
+
+/* =========================
+   Status navigation
+   ========================= */
+
+.ordersC .statusesList{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;                 /* ✅ allow wrapping */
+    justify-content: center;
+    gap: 10px;                       /* better than space-around */
+    padding: 15px;
+    border-radius: 10px;
+    border: var(--border-style);
+}
+
+.ordersC .statusesList .statusListItem{
+    flex: 0 0 auto;
+}
+
+.ordersC .statusesList .statusListItem .statusLink{
+    display: inline-block;
+    text-decoration: none;
+    padding: 8px 12px;
+    color: var(--light-black);
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.ordersC .statusesList .statusListItem .statusLink:hover{
+    background-color: var(--hover-color);
+    color: var(--dark-black);
+}
+
+/* =========================
+   No orders message
+   ========================= */
+
+.ordersC .handleOrdersC .noOrdersMsg{
+    font-size: 1rem;
+}
+
+/* =========================
+   Responsive styles
+   ========================= */
+
+/* Tablets & small laptops */
+@media (max-width: 1024px) {
+    .ordersC {
+        padding: 16px;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+
+    .ordersC {
+        padding: 14px;
+        border-radius: 8px;
+    }
+
+    .ordersC .ordersHeader {
+        font-size: 1.2rem;
+    }
+
+    .ordersC .statusesList {
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .ordersC .statusesList .statusListItem .statusLink {
+        padding: 6px 10px;
+        font-size: 0.9rem;
+    }
+
+    .ordersC .handleOrdersC {
+        margin-top: 15px;
+    }
+
+    .ordersC .handleOrdersC .noOrdersMsg {
+        font-size: 0.95rem;
+        text-align: center;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 480px) {
+
+    .ordersC {
+        padding: 12px;
+    }
+
+    .ordersC .ordersHeader {
+        font-size: 1.05rem;
+    }
+
+    .ordersC .statusesList {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .ordersC .statusesList .statusListItem .statusLink {
+        width: 100%;
+        text-align: center;
+    }
+}
+

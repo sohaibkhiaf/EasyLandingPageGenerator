@@ -1,0 +1,177 @@
+.visualsC{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    border: var(--border-style);
+    box-shadow: var(--body-shadow);
+}
+
+.visualsC .visualsHeader{
+    margin: 0 0 20px 0;
+}
+
+/* visuals form ***************************************************************** */
+
+/* project icon  */
+
+.visualsC .visualsForm .iconPickerC label{
+    display: block;
+    font-size: .9rem;
+    margin: 10px 0 5px 0;
+}
+.visualsC .visualsForm .iconPickerC .iconC {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.visualsC .visualsForm .iconPickerC .iconC img{
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    cursor: pointer;
+    object-fit: cover;
+}
+.visualsC .visualsForm .iconPickerC .iconC img:hover{
+    opacity: .9;
+}
+.visualsC .visualsForm .iconPickerC p{
+    font-size: .9rem;
+    color: var(--error-color);
+    margin: 0;
+}
+
+
+/* multiple images */
+
+.visualsC .visualsForm .multipleImgsPickerC label{
+    display: block;
+    font-size: .9rem;
+    margin: 10px 0 5px 0;
+}
+.visualsC .visualsForm .multipleImgsPickerC .multipleC {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+    gap: 10px;
+}
+/* images  */
+.visualsC .visualsForm .multipleImgsPickerC .multipleC
+.imageC{
+    position: relative;
+    display: flex;
+}
+.visualsC .visualsForm .multipleImgsPickerC .multipleC
+.imageC .deleteImg{
+    color: #ffffff;
+    position: absolute;
+    top: 7px;
+    cursor: pointer;
+    opacity: .9;
+}
+.visualsC .visualsForm .multipleImgsPickerC .multipleC
+.imageC .deleteImg:hover{
+    opacity: 1;
+}
+.visualsC .visualsForm .multipleImgsPickerC .multipleC
+.imageC img{
+    width: 100%;     /* take full grid column width */
+    border-radius: 5px;
+    object-fit: cover;
+    aspect-ratio: 1 / .75;
+}
+/* picker */
+.visualsC .visualsForm .multipleImgsPickerC .multipleC
+img.pickerImg{
+    width: 100%;     /* take full grid column width */
+    border-radius: 5px;
+    object-fit: cover;
+    aspect-ratio: 1 / .75;
+    cursor: pointer;
+}
+.visualsC .visualsForm .multipleImgsPickerC .multipleC
+img.pickerImg:hover{
+    opacity: .9;
+}
+.visualsC .visualsForm .multipleImgsPickerC p{
+    font-size: .9rem;
+    color: var(--error-color);
+    margin: 0;
+}
+
+
+/* create button  */
+
+.visualsC .visualsForm .updateBtnC{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+.visualsC .visualsForm .updateBtnC .updateBtn{
+    background-color: var(--light-blue);
+    padding: 5px 10px;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    font-size: .9rem;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.visualsC .visualsForm .updateBtnC .updateBtn:hover{
+    background-color: var(--dark-blue);
+    cursor: pointer;
+}
+
+/* ================= RESPONSIVE VISUALS ================= */
+
+/* Mobile & small tablets */
+@media (max-width: 768px) {
+
+    /* Center everything */
+    .visualsC .visualsForm {
+        text-align: center;
+    }
+
+    /* Icon */
+    .visualsC .visualsForm .iconPickerC .iconC img {
+        width: 70px;
+        height: 70px;
+    }
+
+    /* Multiple images grid */
+    .visualsC .visualsForm .multipleImgsPickerC .multipleC {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    /* Update button full width */
+    .visualsC .visualsForm .updateBtnC {
+        justify-content: center;
+    }
+
+    .visualsC .visualsForm .updateBtnC .updateBtn {
+        width: 100%;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+
+    .visualsC {
+        padding: 12px;
+    }
+
+    .visualsC .visualsHeader {
+        font-size: 1.2rem;
+    }
+
+    /* Multiple images tighter grid */
+    .visualsC .visualsForm .multipleImgsPickerC .multipleC {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+    }
+
+}
+
+

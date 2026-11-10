@@ -1,0 +1,110 @@
+/* Base container */
+.supportC {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    border: var(--border-style);
+    box-shadow: var(--body-shadow);
+}
+
+.supportC .supportHeader {
+    margin: 0 0 20px 0;
+    font-size: 1.5rem;
+}
+
+/* Labels */
+.supportC .supportForm label {
+    display: block;
+    font-size: .9rem;
+    margin: 10px 0 5px 0;
+}
+
+/* Inputs */
+.supportC .subjectC input,
+.supportC .contentC textarea {
+    font-size: 1rem;
+    padding: 8px 10px;
+    border: var(--border-style);
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.supportC .contentC textarea {
+    resize: none;
+    height: 200px;
+}
+
+.supportC .subjectC input:hover,
+.supportC .contentC textarea:hover,
+.supportC .subjectC input:focus,
+.supportC .contentC textarea:focus {
+    background-color: var(--hover-color);
+}
+
+/* Error messages */
+.supportC .subjectC p,
+.supportC .contentC p {
+    font-size: .9rem;
+    color: var(--error-color);
+    margin: 0;
+}
+
+/* Send button */
+.supportC .requestBtnC {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.supportC .requestBtn {
+    background-color: var(--light-blue);
+    padding: 5px 10px;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 0;
+    font-size: .9rem;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.supportC .requestBtn:hover {
+    background-color: var(--dark-blue);
+    cursor: pointer;
+}
+
+/* ================== RESPONSIVE STYLES ================== */
+@media (max-width: 768px) {
+    /* Make inputs and textarea full width */
+    .supportC .subjectC input,
+    .supportC .contentC textarea {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .supportC {
+        padding: 15px;
+    }
+
+    .supportC .supportHeader {
+        font-size: 1.3rem;
+    }
+
+    .supportC .requestBtn {
+        width: 100%;
+        font-size: .9rem;
+    }
+
+    .supportC .contentC textarea {
+        height: 150px;
+    }
+}

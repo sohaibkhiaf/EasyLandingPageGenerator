@@ -1,0 +1,329 @@
+
+.createPrdC{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    border: var(--border-style);
+    box-shadow: var(--body-shadow);
+}
+
+.createPrdC .createPrdHeader{
+    margin: 0 0 20px 0;
+}
+
+/* product form  */
+
+.createPrdC .createPrdForm .doubleFieldC{
+    display: flex;
+    gap: 10px;
+}
+.createPrdC .createPrdForm .doubleFieldC .categoryC{
+    flex: 0 0 50%;
+}
+
+.createPrdC .createPrdForm .nameC label,
+.createPrdC .createPrdForm .categoryC label,
+.createPrdC .createPrdForm .descC label,
+.createPrdC .createPrdForm .priceC label,
+.createPrdC .createPrdForm .discountC label,
+.createPrdC .createPrdForm .stockC label,
+.createPrdC .createPrdForm .maxQuantityC label{
+    display: block;
+    font-size: .9rem;
+    margin: 10px 0 5px 0;
+}
+.createPrdC .createPrdForm .nameC input,
+.createPrdC .createPrdForm .categoryC select,
+.createPrdC .createPrdForm .descC textarea,
+.createPrdC .createPrdForm .priceC input,
+.createPrdC .createPrdForm .discountC input,
+.createPrdC .createPrdForm .stockC input,
+.createPrdC .createPrdForm .maxQuantityC input{
+    font-size: 1rem;
+    padding: 8px 10px;
+    border: var(--border-style);
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.createPrdC .createPrdForm .descC textarea{
+    resize: none;
+    height: 200px;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.createPrdC .createPrdForm .nameC input:hover,
+.createPrdC .createPrdForm .categoryC select:hover,
+.createPrdC .createPrdForm .descC textarea:hover,
+.createPrdC .createPrdForm .priceC input:hover,
+.createPrdC .createPrdForm .discountC input:hover,
+.createPrdC .createPrdForm .stockC input:hover,
+.createPrdC .createPrdForm .maxQuantityC input:hover{
+    background-color: var(--hover-color);
+}
+.createPrdC .createPrdForm .nameC input:focus,
+.createPrdC .createPrdForm .categoryC select:focus,
+.createPrdC .createPrdForm .descC textarea:focus,
+.createPrdC .createPrdForm .priceC input:focus,
+.createPrdC .createPrdForm .discountC input:focus,
+.createPrdC .createPrdForm .stockC input:focus,
+.createPrdC .createPrdForm .maxQuantityC input:focus{
+    background-color: var(--hover-color);
+}
+.createPrdC .createPrdForm .nameC p,
+.createPrdC .createPrdForm .categoryC p,
+.createPrdC .createPrdForm .descC p,
+.createPrdC .createPrdForm .priceC p,
+.createPrdC .createPrdForm .discountC p,
+.createPrdC .createPrdForm .stockC p,
+.createPrdC .createPrdForm .maxQuantityC p{
+    font-size: .9rem;
+    color: var(--error-color);
+    margin: 0;
+}
+
+.createPrdC .createPrdForm .trackStockC,
+.createPrdC .createPrdForm .enabledC{
+    margin-top: 10px;
+}
+.createPrdC .createPrdForm .trackStockC label,
+.createPrdC .createPrdForm .enabledC label{
+    font-size: 1rem;
+    margin: 10px 0 5px 0;
+}
+.createPrdC .createPrdForm .trackStockC label input, 
+.createPrdC .createPrdForm .enabledC label input{
+    width: 15px;
+    height: 15px;
+    accent-color: var(--light-blue) ;
+    cursor: pointer;
+}
+
+
+/* main image */
+
+.createPrdC .createPrdForm .mainImgPickerC label{
+    display: block;
+    font-size: .9rem;
+    margin: 10px 0 5px 0;
+}
+.createPrdC .createPrdForm .mainImgPickerC .mainC {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.createPrdC .createPrdForm .mainImgPickerC .mainC img{
+    width: 540px;
+    height: 540px;
+    border-radius: 5px;
+    cursor: pointer;
+    object-fit: cover;
+}
+.createPrdC .createPrdForm .mainImgPickerC .mainC img:hover{
+    opacity: .9;
+}
+.createPrdC .createPrdForm .mainImgPickerC p{
+    font-size: .9rem;
+    color: var(--error-color);
+    margin: 0;
+}
+
+
+/* multiple images */
+
+.createPrdC .createPrdForm .multipleImgsPickerC label{
+    display: block;
+    font-size: .9rem;
+    margin: 10px 0 5px 0;
+}
+.createPrdC .createPrdForm .multipleImgsPickerC .multipleC {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+/* images  */
+.createPrdC .createPrdForm .multipleImgsPickerC .multipleC
+.imageC{
+    position: relative;
+    display: flex;
+}
+.createPrdC .createPrdForm .multipleImgsPickerC .multipleC
+.imageC .deleteImg{
+    color: #ffffff;
+    position: absolute;
+    top: 7px;
+    cursor: pointer;
+    opacity: .9;
+}
+.createPrdC .createPrdForm .multipleImgsPickerC .multipleC
+.imageC .deleteImg:hover{
+    opacity: 1;
+}
+.createPrdC .createPrdForm .multipleImgsPickerC .multipleC
+.imageC img{
+    width: 120px;
+    height: 120px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+/* picker */
+.createPrdC .createPrdForm .multipleImgsPickerC .multipleC
+img.pickerImg{
+    width: 120px;
+    height: 120px;
+    border-radius: 5px;
+    object-fit: cover;
+    cursor: pointer;
+}
+.createPrdC .createPrdForm .multipleImgsPickerC .multipleC
+img.pickerImg:hover{
+    opacity: .9;
+}
+.createPrdC .createPrdForm .multipleImgsPickerC p{
+    font-size: .9rem;
+    color: var(--error-color);
+    margin: 0;
+}
+
+/* create button  */
+
+.createPrdC .createPrdForm .createBtnC{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.createPrdC .createPrdForm .createBtnC .createBtn{
+    background-color: var(--light-blue);
+    padding: 5px 10px;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    font-size: .9rem;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.createPrdC .createPrdForm .createBtnC .createBtn:hover{
+    background-color: var(--dark-blue);
+    cursor: pointer;
+}
+.createPrdC .createPrdForm .createBtnC .createBtn:disabled{
+    background-color: #ffffff;
+    color: var(--light-black);
+    border: var(--border-style);
+    cursor: default;
+}
+
+
+/* ================= RESPONSIVE PROJECT FORM ================= */
+
+/* Mobile & small tablets */
+@media (max-width: 768px) {
+
+    /* Stack all double fields */
+    .createPrdC .createPrdForm .doubleFieldC {
+        flex-direction: column;
+    }
+
+    .createPrdC .createPrdForm .doubleFieldC > div {
+        flex: 1 0 100%;
+    }
+
+    .createPrdC .createPrdForm textarea {
+        height: 160px;
+    }
+
+    /* Main image */
+    .createPrdC .createPrdForm .mainImgPickerC .mainC img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Multiple images grid */
+    .createPrdC .createPrdForm .multipleImgsPickerC .multipleC {
+        gap: 8px;
+    }
+
+    .createPrdC .createPrdForm .multipleImgsPickerC .multipleC
+    .imageC img,
+    .createPrdC .createPrdForm .multipleImgsPickerC .multipleC
+    img.pickerImg {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Action buttons full width */
+    .createPrdC .createPrdForm .createBtnC {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .createPrdC .createPrdForm .createBtnC button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+
+    .createPrdC {
+        padding: 12px;
+    }
+
+    .createPrdC .createPrdHeader {
+        font-size: 1.2rem;
+    }
+
+    .createPrdC .createPrdForm label {
+        font-size: 0.85rem;
+    }
+
+    .createPrdC .createPrdForm input,
+    .createPrdC .createPrdForm textarea {
+        font-size: 0.95rem;
+        padding: 8px;
+    }
+
+    .createPrdC .createPrdForm .trackStockC label {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+
+    /* Main image smaller */
+    .createPrdC .createPrdForm .mainImgPickerC .mainC img {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+
+    /* Multiple images tighter grid */
+    .createPrdC .createPrdForm .multipleImgsPickerC .multipleC {
+        gap: 6px;
+    }
+
+    .createPrdC .createPrdForm .multipleImgsPickerC .multipleC
+    .imageC img,
+    .createPrdC .createPrdForm .multipleImgsPickerC .multipleC
+    img.pickerImg {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+
+
+

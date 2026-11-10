@@ -1,0 +1,215 @@
+
+.storeC{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    border: var(--border-style);
+    box-shadow: var(--body-shadow);
+}
+
+.storeC .storeHeader{
+    margin: 0 0 20px 0;
+}
+
+/* product form  */
+
+.storeC .storeForm .doubleFieldC{
+    display: flex;
+    gap: 10px;
+}
+.storeC .storeForm .doubleFieldC .headlineC{
+    flex: 0 0 100%;
+}
+.storeC .storeForm .doubleFieldC .metaPixelC,
+.storeC .storeForm .doubleFieldC .defaultLanguageC{
+    flex: 0 0 50%;
+}
+
+.storeC .storeForm .nameC label,
+.storeC .storeForm .slugC label,
+.storeC .storeForm .headlineC label,
+.storeC .storeForm .subheadlineC label,
+.storeC .storeForm .metaPixelC label,
+.storeC .storeForm .defaultLanguageC label{
+    display: block;
+    font-size: .9rem;
+    margin: 10px 0 5px 0;
+}
+.storeC .storeForm .slugC .copyIcon{
+    cursor: pointer;
+}
+.storeC .storeForm .slugC .copyIcon:hover{
+    color: var(--dark-black);
+}
+.storeC .storeForm .nameC input,
+.storeC .storeForm .slugC input,
+.storeC .storeForm .headlineC input,
+.storeC .storeForm .subheadlineC textarea,
+.storeC .storeForm .metaPixelC input,
+.storeC .storeForm .defaultLanguageC select{
+    font-size: 1rem;
+    padding: 8px 10px;
+    border: var(--border-style);
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.storeC .storeForm .subheadlineC textarea{
+    resize: none;
+    height: 200px;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.storeC .storeForm .slugC input{
+    font-size: 1rem;
+    padding: 8px 10px;
+    border: var(--border-style);
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+.storeC .storeForm .nameC input:hover,
+.storeC .storeForm .headlineC input:hover,
+.storeC .storeForm .subheadlineC textarea:hover,
+.storeC .storeForm .metaPixelC input:hover,
+.storeC .storeForm .defaultLanguageC select:hover{
+    background-color: var(--hover-color);
+}
+.storeC .storeForm .nameC input:focus,
+.storeC .storeForm .headlineC input:focus,
+.storeC .storeForm .subheadlineC textarea:focus,
+.storeC .storeForm .metaPixelC input:focus,
+.storeC .storeForm .defaultLanguageC select:focus{
+    background-color: var(--hover-color);
+}
+.storeC .storeForm .nameC p,
+.storeC .storeForm .headlineC p,
+.storeC .storeForm .subheadlineC p,
+.storeC .storeForm .metaPixelC p,
+.storeC .storeForm .defaultLanguageC p{
+    font-size: .9rem;
+    color: var(--error-color);
+    margin: 0;
+}
+
+/* action buttons  */
+
+.storeC .storeForm .actionBtnsC{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* update button */
+
+.storeC .storeForm .actionBtnsC .updateBtn{
+    background-color: var(--light-blue);
+    padding: 5px 10px;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    font-size: .9rem;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.storeC .storeForm .actionBtnsC .updateBtn:hover{
+    background-color: var(--dark-blue);
+    cursor: pointer;
+}
+.storeC .storeForm .actionBtnsC .updateBtn:disabled{
+    background-color: #ffffff;
+    color: var(--light-black);
+    border: var(--border-style);
+    cursor: default;
+}
+
+/* delete button */
+
+.storeC .storeForm .actionBtnsC .deleteBtn{
+    background-color: hsl(0, 92%, 40%);
+    padding: 5px 10px;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    font-size: .9rem;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.storeC .storeForm .actionBtnsC .deleteBtn:hover{
+    background-color:hsl(0, 92%, 30%);
+    cursor: pointer;
+}
+
+
+/* ================= RESPONSIVE PROJECT FORM ================= */
+
+/* Mobile & small tablets */
+@media (max-width: 768px) {
+
+    /* Stack all double fields */
+    .storeC .storeForm .doubleFieldC {
+        flex-direction: column;
+    }
+
+    .storeC .storeForm .doubleFieldC > div {
+        flex: 1 0 100%;
+    }
+
+    .storeC .storeForm textarea {
+        height: 160px;
+    }
+
+    /* Action buttons full width */
+    .storeC .storeForm .actionBtnsC {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .storeC .storeForm .actionBtnsC button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+
+    .storeC {
+        padding: 12px;
+    }
+
+    .storeC .storeHeader {
+        font-size: 1.2rem;
+    }
+
+    .storeC .storeForm label {
+        font-size: 0.85rem;
+    }
+
+    .storeC .storeForm input,
+    .storeC .storeForm textarea {
+        font-size: 0.95rem;
+        padding: 8px;
+    }
+
+}
+
+
+
+

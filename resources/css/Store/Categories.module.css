@@ -1,0 +1,92 @@
+
+.categoriesC{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    border: var(--border-style);
+    box-shadow: var(--body-shadow);
+}
+
+.categoriesC .categoriesHeader{
+    margin: 0 0 20px 0;
+}
+
+
+/* create category button  */
+
+.categoriesC .createCtgBtnC{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.categoriesC .createCtgBtnC .createCtgBtn{
+    background-color: var(--light-blue);
+    padding: 5px 10px;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: .9rem;
+    border: 0;
+    text-decoration: none;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.categoriesC .createCtgBtnC .createCtgBtn:hover{
+    background-color: var(--dark-blue);
+    cursor: pointer;
+}
+
+/* shippings container  */
+
+.categoriesC .ctgsC{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* ================= RESPONSIVE SHIPPING ================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .categoriesC {
+        padding: 16px;
+    }
+
+    .categoriesC .categoriesHeader {
+        font-size: 1.4rem;
+    }
+
+    .categoriesC .ctgsC {
+        gap: 12px;
+    }
+}
+
+/* Mobile & small tablets */
+@media (max-width: 768px) {
+
+    /* Header centered */
+    .categoriesC .categoriesHeader {
+        font-size: 1.3rem;
+    }
+
+    /* Shipping forms stack */
+    .categoriesC .ctgsC {
+        flex-direction: column;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+
+    .categoriesC {
+        padding: 12px;
+    }
+
+    .categoriesC .categoriesHeader {
+        font-size: 1.2rem;
+    }
+}
+

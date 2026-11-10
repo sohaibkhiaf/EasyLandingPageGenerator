@@ -1,0 +1,159 @@
+
+/* container spacing */
+.loginC {
+    width: 100%;
+}
+
+/* header */
+.loginC .loginHeader{
+    margin: 0 0 20px 0;
+    font-size: 1.4rem;
+}
+
+/* fields */
+.loginC .loginForm .emailC label,
+.loginC .loginForm .passwordC label{
+    display: block;
+    font-size: .9rem;
+    margin: 10px 0 5px 0;
+}
+
+.loginC .loginForm .emailC input,
+.loginC .loginForm .passwordC input{
+    font-size: 1rem;
+    padding: 8px 10px;
+    border: var(--border-style);
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.loginC .loginForm .emailC input:hover,
+.loginC .loginForm .passwordC input:hover{
+    background-color: var(--hover-color);
+}
+.loginC .loginForm .emailC input:focus,
+.loginC .loginForm .passwordC input:focus{
+    background-color: var(--hover-color);
+}
+
+.loginC .loginForm .emailC p,
+.loginC .loginForm .passwordC p{
+    font-size: .9rem;
+    color: var(--error-color);
+    margin: 0;
+}
+
+/* remember me  */
+.loginC .loginForm .rememberC{
+    margin: 5px 0;
+}
+.loginC .loginForm .rememberC input{
+    width: 15px;
+    height: 15px;
+    accent-color: var(--light-blue) ;
+    cursor: pointer;
+}
+.loginC .loginForm .rememberC span{
+    font-size: 1rem;
+}
+
+/* login button  */
+.loginC .loginForm .loginBtnC{
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px 0;
+}
+
+.loginC .loginForm .loginBtnC .loginBtn{
+    background-color: var(--light-blue);
+    padding: 2px 10px;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 0;
+    font-size: 1rem;
+    width: 100%;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.loginC .loginForm .loginBtnC .loginBtn:hover{
+    background-color: var(--dark-blue);
+    cursor: pointer;
+}
+
+/* register link  */
+
+.loginC .loginForm .registerLinkC{
+    font-size: 1rem;
+}
+
+.loginC .loginForm .registerLinkC .registerLink{
+    font-size: 1rem;
+    color: var(--light-blue);
+    text-decoration: none;
+}
+.loginC .loginForm .registerLinkC .registerLink:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+/* 📱 Tablets */
+@media (max-width: 768px) {
+    .loginC .loginHeader {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .loginC .loginForm .loginBtnC {
+        justify-content: center;
+    }
+}
+
+/* 📱 Phones */
+@media (max-width: 480px) {
+
+    .loginC .loginHeader {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .loginC .loginForm .emailC label,
+    .loginC .loginForm .passwordC label {
+        font-size: .85rem;
+    }
+
+    .loginC .loginForm .emailC input,
+    .loginC .loginForm .passwordC input {
+        font-size: .95rem;
+        padding: 7px 8px;
+    }
+
+    .loginC .loginForm .rememberC span {
+        font-size: .9rem;
+    }
+
+    .loginC .loginForm .loginBtnC .loginBtn {
+        font-size: .95rem;
+        padding: 8px;
+    }
+
+    .loginC .loginForm .registerLinkC {
+        font-size: .9rem;
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+

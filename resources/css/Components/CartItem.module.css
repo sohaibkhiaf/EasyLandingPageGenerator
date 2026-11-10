@@ -1,0 +1,78 @@
+.itemC {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+    border: var(--border-style);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: var(--body-shadow);
+    position: relative;
+    padding: 5px;
+}
+
+/* item image *************************************** */
+.itemC .itemImageC .itemImage{
+    border-radius: 5px;
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+}
+
+/* item details ************************************ */
+
+/* product name */
+.itemC .itemDetailsC .productName {
+    font-size: .9rem;
+}
+
+/* quantity */
+.itemC .itemDetailsC .quantityC {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.itemC .itemDetailsC .quantityC .decreaseQuantity,
+.itemC .itemDetailsC .quantityC .increaseQuantity{
+    background-color: #ffffff;
+    font-size: .8rem;
+    padding: 2px 4px;
+    border: var(--border-style);
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.itemC .itemDetailsC .quantityC .decreaseQuantity:hover,
+.itemC .itemDetailsC .quantityC .increaseQuantity:hover{
+    background-color: var(--hover-color);
+}
+.itemC .itemDetailsC .quantityC .itemQuantity{
+    font-size: .9rem;
+    text-align: center;
+}
+
+/* unit price */
+.itemC .itemDetailsC .unitPrice{
+    font-size: .9rem;
+}
+
+/* subtotal */
+.itemC .itemDetailsC .subtotal{
+    font-size: .9rem;
+}
+
+/* delete button */
+.itemC .itemDetailsC .deleteItem {
+    cursor: pointer;
+    color: var(--normal-black);
+    position: absolute;
+    top: 5px;
+}
+.itemC .itemDetailsC .deleteItem:hover {
+    color: var(--dark-black);
+}

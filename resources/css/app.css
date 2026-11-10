@@ -1,0 +1,83 @@
+
+/* palette
+#006ee6
+#0062cc
+#0055b3
+#004999
+#003d80
+#003166
+#00254d
+#001833
+#000c19
+#000000
+*/
+
+:root {
+  --light-blue: #0062cc;
+  --dark-blue: #0055b3;
+
+  --light-black: hsl(0, 0%, 30%);
+  --normal-black: hsl(0, 0%, 20%);
+  --dark-black: hsl(0, 0%, 10%);
+
+  --error-color: #950606;
+  --body-color: hsl(0, 0%, 98%);
+  --hover-color: hsl(0, 0%, 95%);
+
+  --border-style: 1px solid hsl(0, 0%, 80%);
+
+  --body-shadow: 2px 2px 2px hsla(0, 0%, 0%, 0.055);
+  --header-shadow: 2px 2px 2px hsla(0, 0%, 0%, 0.2);
+
+  --light-text: hsl(0, 0%, 50%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+html {
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--normal-black);
+    font-size: 16px;
+}
+body{
+    margin: 0;
+    background-color: var(--body-color);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #ffffff;
+    padding: 13px;
+    width: 42px; height: 42px;
+    border: var(--border-style);
+    border-radius: 10px;
+    background-color: hsla(0, 0%, 0%, 0.2);
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background: hsla(0, 0%, 0%, 0.3);
+}
+
+/* media queries: small adjustments */
+
+@media (max-width: 992px) {
+    html {
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 576px) {
+    html {
+        font-size: 85%;
+    }
+}
+
+

@@ -1,0 +1,38 @@
+
+.deviceC{
+    border: var(--border-style);
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: var(--body-shadow);
+
+    /* disable selection (ai generated)  */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none;     /* IE 10+ */
+    user-select: none;
+}
+
+.deviceC .platform{
+    font-size: .9rem;
+    margin: 0;
+}
+
+.deviceC .platform .currentDeviceIcon{
+    color: #5edc1f;
+}
+
+.deviceC .ip{
+    font-size: .9rem;
+    margin: 0;
+}
+
+.deviceC .lastActivity{
+    font-size: .8rem;
+    margin: 0;
+    color: var(--light-text);
+    font-style: italic;
+}
+
+

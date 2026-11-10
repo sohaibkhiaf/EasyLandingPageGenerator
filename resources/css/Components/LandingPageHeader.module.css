@@ -1,0 +1,115 @@
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: var(--header-shadow);
+    height: 50px;
+    padding: 0 32px;
+    position: relative;
+
+    /* smart header on scroll style (ai generated) */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: transform 0.3s ease;
+    z-index: 999;
+}
+
+/* icon */
+
+.header .iconC img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* language */
+
+.header .langC{
+    display: flex;
+    align-items: center;
+}
+
+.header .langC select{
+    height: 32px;
+    padding: 0 5px;
+    font-size: .85rem;
+    border-radius: 5px;
+    background-color: #ffffff;
+    cursor: pointer;
+    border-width: 0;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.header .langC select:hover{
+    background-color: var(--hover-color);
+}
+
+/* flash messages */
+
+.header .flashSuccess {
+    color: #ffffff;
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 5px 10px;
+    display: inline-block;
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    box-shadow: var(--header-shadow);
+}
+
+.header .flashError {
+    background-color: var(--error-color);
+    color: #ffffff;
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 5px 10px;
+    display: inline-block;
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    box-shadow: var(--header-shadow);
+}
+
+
+/* responsive *************************************************************** */
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0 16px;
+    }
+
+    .header .iconC img {
+        width: 36px;
+        height: 36px;
+        margin: 7px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 0 10px;
+    }
+
+    .header .flashSuccess,
+    .header .flashError {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        max-width: 90%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+}
+
+
+

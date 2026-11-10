@@ -1,0 +1,241 @@
+
+/* container spacing */
+.registerC {
+    width: 100%;
+    font-size: 1.4rem;
+}
+
+/* header  */
+.registerC .registerHeader{
+    margin: 0 0 20px 0;
+}
+
+/* double field  */
+.registerC .registerForm .doubleFieldC{
+    display: flex;
+    gap: 10px;
+}
+.registerC .registerForm .doubleFieldC div{
+    flex: 1 1 50%;
+}
+
+/* fields  */
+.registerC .registerForm .firstNameC label,
+.registerC .registerForm .lastNameC label,
+.registerC .registerForm .emailC label,
+.registerC .registerForm .phoneC label,
+.registerC .registerForm .addressC label,
+.registerC .registerForm .passwordC label,
+.registerC .registerForm .passwordConfirmationC label{
+    display: block;
+    font-size: .9rem;
+    margin: 10px 0 5px 0;
+}
+
+.registerC .registerForm .firstNameC input,
+.registerC .registerForm .lastNameC input,
+.registerC .registerForm .emailC input,
+.registerC .registerForm .phoneC input,
+.registerC .registerForm .addressC input,
+.registerC .registerForm .passwordC input,
+.registerC .registerForm .passwordConfirmationC input{
+    font-size: 1rem;
+    padding: 8px 10px;
+    border: var(--border-style);
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.registerC .registerForm .firstNameC input:hover,
+.registerC .registerForm .lastNameC input:hover,
+.registerC .registerForm .emailC input:hover,
+.registerC .registerForm .phoneC input:hover,
+.registerC .registerForm .addressC input:hover,
+.registerC .registerForm .passwordC input:hover,
+.registerC .registerForm .passwordConfirmationC input:hover{
+    background-color: var(--hover-color);
+}
+.registerC .registerForm .firstNameC input:focus,
+.registerC .registerForm .lastNameC input:focus,
+.registerC .registerForm .emailC input:focus,
+.registerC .registerForm .phoneC input:focus,
+.registerC .registerForm .addressC input:focus,
+.registerC .registerForm .passwordC input:focus,
+.registerC .registerForm .passwordConfirmationC input:focus{
+    background-color: var(--hover-color);
+}
+
+.registerC .registerForm .firstNameC p,
+.registerC .registerForm .lastNameC p,
+.registerC .registerForm .emailC p,
+.registerC .registerForm .phoneC p,
+.registerC .registerForm .addressC p,
+.registerC .registerForm .passwordC p,
+.registerC .registerForm .passwordConfirmationC p{
+    font-size: .9rem;
+    color: var(--error-color);
+    margin: 0;
+}
+
+/* region selector  */
+.registerC .registerForm .regionC label{
+    display: block;
+    font-size: .9rem;
+    margin: 10px 0 5px 0;
+}
+.registerC .registerForm .regionC select{
+    font-size: 1rem;
+    padding: 8px 10px;
+    border-radius: 10px;
+    border: var(--border-style);
+    background-color: #ffffff;
+    cursor: pointer;
+    width: 100%;
+
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.registerC .registerForm .regionC select:hover{
+    background-color: var(--hover-color);
+    cursor: pointer;
+}
+.registerC .registerForm .regionC p{
+    font-size: .9rem;
+    color: var(--error-color);
+    margin: 0;
+}
+/* remember me  */
+.registerC .registerForm .rememberC{
+    margin: 5px 0;
+}
+.registerC .registerForm .rememberC label{
+    font-size: 1rem;
+}
+
+.registerC .registerForm .rememberC label input{
+    width: 15px;
+    height: 15px;
+    accent-color: var(--light-blue) ;
+    cursor: pointer;
+}
+
+/* register button  */
+.registerC .registerForm .registerBtnC{
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px 0;
+}
+
+.registerC .registerForm .registerBtnC .registerBtn{
+    background-color: var(--light-blue);
+    padding: 2px 10px;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 0;
+    font-size: 1rem;
+    width: 100%;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.registerC .registerForm .registerBtnC .registerBtn:hover{
+    background-color: var(--dark-blue);
+    cursor: pointer;
+}
+
+/* login link  */
+
+.registerC .registerForm .loginLinkC{
+    font-size: 1rem;
+}
+
+.registerC .registerForm .loginLinkC .loginLink{
+    font-size: 1rem;
+    color: var(--light-blue);
+    text-decoration: none;
+}
+.registerC .registerForm .loginLinkC .loginLink:hover{
+    text-decoration: underline;
+}
+
+/* 📱 Tablets & below */
+@media (max-width: 768px) {
+
+    .registerC .registerHeader {
+        text-align: center;
+        font-size: 1.3rem;
+    }
+
+    /* stack double fields */
+    .registerC .registerForm .doubleFieldC {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .registerC .registerForm .doubleFieldC div {
+        flex: 1 1 100%;
+    }
+}
+
+
+/* 📱 Phones */
+@media (max-width: 480px) {
+
+    .registerC .registerHeader {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    /* labels */
+    .registerC .registerForm label {
+        font-size: .85rem;
+    }
+
+    /* inputs & selects */
+    .registerC .registerForm input,
+    .registerC .registerForm select {
+        font-size: .95rem;
+        padding: 7px 8px;
+        border-radius: 8px;
+    }
+
+    /* errors */
+    .registerC .registerForm p {
+        font-size: .8rem;
+    }
+
+    /* remember me */
+    .registerC .registerForm .rememberC label {
+        font-size: .9rem;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    /* button */
+    .registerC .registerForm .registerBtnC
+    .registerBtn {
+        font-size: .95rem;
+        padding: 8px;
+    }
+
+    /* login link */
+    .registerC .registerForm .loginLinkC {
+        font-size: .9rem;
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+

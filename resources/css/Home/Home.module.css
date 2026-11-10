@@ -1,0 +1,246 @@
+.homeC{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    border: var(--border-style);
+    box-shadow: var(--body-shadow);
+}
+
+.homeC .homeHeader{
+    margin: 0 0 20px 0;
+}
+
+/* overview */
+
+.homeC .overviewHeader{
+    margin: 5px 0;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.homeC .doubleItemC{
+    display: flex;
+    border: var(--border-style);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: var(--body-shadow);
+
+    /* disable selection (ai generated)  */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none;     /* IE 10+ */
+    user-select: none;
+}
+
+/* total sales  */
+.homeC .totalSalesC{
+    flex: 50%;
+    padding: 10px;
+}
+
+.homeC .totalSalesC div{
+    font-weight: bolder;
+    font-size: .8rem;
+    color: var(--light-text);
+    margin-bottom: 10px;
+}
+
+.homeC .totalSalesC p{
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+/* total orders  */
+.homeC .totalOrdersC{
+    flex: 50%;
+    padding: 10px;
+}
+
+.homeC .totalOrdersC div{
+    font-weight: bolder;
+    font-size: .8rem;
+    color: var(--light-text);
+    margin-bottom: 10px;
+}
+
+.homeC .totalOrdersC p{
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+/* your projects */
+
+.homeC .yourProjectsHeader{
+    margin: 5px 0;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.homeC .yourProjectsC{
+    position: relative;
+}
+
+.homeC .yourProjectsC .yourProjects{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px;
+}
+
+.homeC .yourProjectsC .noProjectsMsg{
+    font-size: 1rem;
+}
+
+/* add project button  */
+.homeC .yourProjectsC .addProjectBtnC{
+    position: absolute;
+    top: -42px;
+}
+.homeC .yourProjectsC .addProjectBtnC .addProjectBtn{
+    background-color: var(--light-blue);
+    padding: 5px 10px;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 0;
+    font-size: .9rem;
+    text-decoration: none;
+    margin-bottom: 10px;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.homeC .yourProjectsC .addProjectBtnC .addProjectBtn:hover{
+    background-color: var(--dark-blue);
+    cursor: pointer;
+}
+
+.homeC .yourProjectsC .addProjectBtnC .addProjectOptionsC{
+    display: none;
+    z-index: 999;
+}
+.homeC .yourProjectsC .addProjectBtnC .addProjectOptionsC
+.landingPageBtn,
+.homeC .yourProjectsC .addProjectBtnC .addProjectOptionsC
+.storeBtn{
+    background-color: var(--light-blue);
+    padding: 5px 10px;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 0;
+    font-size: .9rem;
+    text-decoration: none;
+    display: block;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.homeC .yourProjectsC .addProjectBtnC .addProjectOptionsC
+.landingPageBtn{
+    margin-bottom: 10px;
+}
+.homeC .yourProjectsC .addProjectBtnC .addProjectOptionsC
+.landingPageBtn:hover,
+.homeC .yourProjectsC .addProjectBtnC .addProjectOptionsC
+.storeBtn:hover{
+    background-color: var(--dark-blue);
+    cursor: pointer;
+}
+
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+/* Tablets */
+@media (max-width: 768px) {
+
+    .homeC {
+        padding: 16px;
+    }
+
+    .homeC .homeHeader {
+        font-size: 1.2rem;
+    }
+
+    /* overview cards */
+    .homeC .doubleItemC {
+        flex-direction: column;
+    }
+
+    .homeC .totalSalesC,
+    .homeC .totalOrdersC {
+        flex: 100%;
+        border-left: none !important;
+        border-right: none !important;
+    }
+
+    .homeC .totalSalesC{
+        border-bottom: var(--border-style);
+    }
+
+    .homeC .totalSalesC p,
+    .homeC .totalOrdersC p {
+        font-size: 1.2rem;
+    }
+
+    /* add project button */
+    .homeC .yourProjectsC .addProjectBtnC {
+        position: static;
+        margin-top: 20px;
+    }
+    .homeC .yourProjectsC .addProjectBtnC .addProjectBtn{
+        text-align: center;
+        width: 100%;
+    }
+    .homeC .yourProjectsC .addProjectBtnC .addProjectOptionsC{
+        margin-bottom: 0;
+    }
+    .homeC .yourProjectsC .addProjectBtnC .addProjectOptionsC
+    .landingPageBtn,
+    .homeC .yourProjectsC .addProjectBtnC .addProjectOptionsC
+    .storeBtn{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+
+    .homeC {
+        padding: 12px;
+    }
+
+    .homeC .homeHeader {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+
+    .homeC .overviewHeader,
+    .homeC .yourProjectsHeader {
+        font-size: .9rem;
+    }
+
+    /* project cards */
+    .homeC .yourProjectsC .yourProjects {
+        gap: 8px;
+    }
+
+    .homeC .yourProjectsC .noProjectsMsg {
+        font-size: .9rem;
+    }
+
+    /* button full width */
+    .homeC .yourProjectsC .addProjectBtnC .addProjectBtn{
+        font-size: .85rem;
+    }
+    .homeC .yourProjectsC .addProjectBtnC .addProjectOptionsC
+    .landingPageBtn,
+    .homeC .yourProjectsC .addProjectBtnC .addProjectOptionsC
+    .storeBtn{
+        font-size: .85rem;
+    }
+}
+

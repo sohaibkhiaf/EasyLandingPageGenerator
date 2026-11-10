@@ -1,0 +1,260 @@
+/* container ********************************************* */
+.openPanelC {
+    position: fixed;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+    background-color: #ffffff;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+    padding: 10px;
+    z-index: 1000;
+    display: flex; flex-direction: column;
+
+    /* animation */
+    transition: all 0.4s ease;
+
+    /* visible */
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.closedPanelC {
+    position: fixed;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+    background-color: #ffffff;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+    padding: 10px;
+    z-index: 1000;
+    display: flex;flex-direction: column;
+
+    /* animation */
+    transition: all 0.4s ease;
+
+    /* hidden */
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+/* close button ************************************************ */
+.closeBtnC {
+    display: flex;
+    justify-content: flex-start;
+}
+.closeBtnC .closeBtn{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* cart panel *************************************************** */
+.cartPanelC{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex: 1;         
+    overflow: auto;  
+}
+
+/* user information form **********************************************/
+
+.cartPanelC .informationC{
+    flex: 1 1 50%;
+    overflow-y: auto;
+}
+
+/* client name, client phone, client address  */
+.cartPanelC .informationC .clientNameC label,
+.cartPanelC .informationC .clientPhoneC label,
+.cartPanelC .informationC .clientAddressC label{
+    display: block;
+    font-size: .85rem;
+    margin: 7px 0 4px 0;
+}
+.cartPanelC .informationC .clientNameC input,
+.cartPanelC .informationC .clientPhoneC input,
+.cartPanelC .informationC .clientAddressC input{
+    font-size: .9rem;
+    padding: 4px 7px;
+    border: var(--border-style);
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.cartPanelC .informationC .clientNameC input:hover,
+.cartPanelC .informationC .clientPhoneC input:hover,
+.cartPanelC .informationC .clientAddressC input:hover{
+    background-color: var(--hover-color);
+}
+.cartPanelC .informationC .clientNameC input:focus,
+.cartPanelC .informationC .clientPhoneC input:focus,
+.cartPanelC .informationC .clientAddressC input:focus{
+    background-color: var(--hover-color);
+}
+.cartPanelC .informationC .clientNameC p,
+.cartPanelC .informationC .clientPhoneC p,
+.cartPanelC .informationC .clientAddressC p{
+    font-size: .85rem;
+    color: var(--error-color);
+    margin: 0;
+}
+/* client region, shipping type */
+.cartPanelC .informationC .shippingTypeC label,
+.cartPanelC .informationC .regionC label{
+    display: block;
+    font-size: .85rem;
+    margin: 7px 0 4px 0;
+}
+.cartPanelC .informationC .shippingTypeC select,
+.cartPanelC .informationC .regionC select{
+    font-size: .9rem;
+    padding: 4px 7px;
+    border-radius: 5px;
+    border: var(--border-style);
+    background-color: #ffffff;
+    cursor: pointer;
+    width: 100%;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.cartPanelC .informationC .shippingTypeC select:hover,
+.cartPanelC .informationC .regionC select:hover{
+    background-color: var(--hover-color);
+    cursor: pointer;
+}
+.cartPanelC .informationC .shippingTypeC p,
+.cartPanelC .informationC .regionC p{
+    font-size: .85rem;
+    color: var(--error-color);
+    margin: 0;
+}
+
+/* invoice/ action button ************************************************* */
+
+.cartPanelC .informationC .payBtnC{
+    margin: 10px 0;
+}
+/* invoice */
+.cartPanelC .informationC .payBtnC .invoiceC{
+    margin: 10px 0 0 0;
+    border: var(--border-style);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.cartPanelC .informationC .payBtnC .invoiceC .subtotal{
+    margin: 0;
+    font-size: .85rem;
+    flex: 1 1 33.333%;
+    padding: 5px;
+}
+.cartPanelC .informationC .payBtnC .invoiceC .shipping{
+    margin: 0;
+    font-size: .85rem;
+    flex: 1 1 33.333%;
+    padding: 5px;
+}
+.cartPanelC .informationC .payBtnC .invoiceC .total{
+    margin: 0;
+    font-size: .85rem;
+    flex: 1 1 33.333%;
+    padding: 5px;
+}
+/* button */
+.cartPanelC .informationC .payBtnC .payBtn{
+    padding: 4px 7px;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 0;
+    font-size: .9rem;
+    width: 100%;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.cartPanelC .informationC .payBtnC .payBtn:hover{
+    background-color: var(--dark-blue);
+    cursor: pointer;
+}
+.cartPanelC .informationC .payBtnC .payBtn:disabled{
+    cursor: text;
+    color: var(--light-black);
+    border: var(--border-style);
+}
+
+
+/* project details ************************************ */
+.cartPanelC .itemsC{
+    flex: 1 1 50%;
+    overflow-y: auto;
+}
+
+
+/* ================================
+   RESPONSIVE BREAKPOINTS
+================================ */
+
+/* Tablets & small laptops */
+@media (max-width: 1024px) {
+
+    .openPanelC,
+    .closedPanelC{
+        width: 60%;
+    }
+
+}
+
+/* Mobile & small tablets */
+@media (max-width: 768px) {
+
+    .openPanelC,
+    .closedPanelC{
+        width: 75%;
+        overflow-y: auto;
+    }
+
+    .cartPanelC{
+        display: block;
+    }
+
+    .cartPanelC .itemsC,
+    .cartPanelC .informationC{
+        overflow-y: visible;
+    }
+
+    .cartPanelC .informationC .payBtnC .invoiceC{
+        flex-direction: column;
+    }
+    .cartPanelC .informationC .payBtnC .invoiceC p{
+        border: none !important;
+        border-bottom: var(--border-style);
+    }
+    .cartPanelC .informationC .payBtnC .invoiceC p:last-child{
+        border-bottom: none;
+    }
+
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+
+    .openPanelC,
+    .closedPanelC{
+        width: 90%;
+    }
+
+}
+
+

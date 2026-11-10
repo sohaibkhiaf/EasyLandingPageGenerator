@@ -1,0 +1,101 @@
+
+.footerC{
+    max-width: 1100px;
+    margin: 72px auto 0;
+}
+.footerC .boxC{
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+/* box */
+
+.footerC .boxC .box{
+    padding: 0 20px;
+}
+.footerC .boxC .box h3{
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+.footerC .boxC .box a{
+    display: block;
+    font-size: 1rem;
+    margin: 10px 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--normal-black);
+}
+
+/* social media */
+
+.footerC .socialMedia{
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+.footerC .socialMedia a{
+    margin: 0 10px;
+}
+.footerC .socialMedia a .icon{
+    font-size: 2.2rem;
+    color: var(--normal-black);
+}
+.footerC .socialMedia a .icon:hover{
+    color: var(--light-blue);
+}
+
+/* credit */
+
+.footerC .credit{
+    margin: 10px 0;
+    font-size: 1.1rem;
+    text-align: center;
+    cursor: default;
+}
+
+
+/* responsive *************************************************************** */
+
+/* tablets and below: 2 boxes per row */
+@media (max-width: 992px) {
+    .footerC {
+        margin-top: 56px;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .footerC .boxC {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .footerC .boxC .box {
+        /* 2 per row: account for gap (20px)
+        + horizontal padding (40px * 2) */
+        flex: 0 0 calc((100% - 100px) / 2);
+    }
+}
+
+/* small mobiles: stacked and centered */
+@media (max-width: 576px) {
+    .footerC {
+        margin-top: 40px;
+        padding: 0 10px;
+    }
+
+    .footerC .boxC .box {
+        flex: 0 0 100%;
+        text-align: center;
+    }
+
+    .footerC .socialMedia {
+        margin: 20px 0;
+    }
+
+    .footerC .credit {
+        font-size: 1rem;
+    }
+}
+

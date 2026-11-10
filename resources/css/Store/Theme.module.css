@@ -1,0 +1,281 @@
+
+.themeC{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    border: var(--border-style);
+    box-shadow: var(--body-shadow);
+}
+
+.themeC .themeHeader{
+    margin: 0 0 20px 0;
+}
+
+/* theme form */
+
+.themeC .themeForm .doubleFieldC{
+    display: flex;
+    gap: 10px;
+}
+.themeC .themeForm .doubleFieldC div {
+    flex: 1 1 50%;
+}
+
+.themeC .themeForm h4{
+    margin: 20px 0 5px 0;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.themeC .themeForm .lightColorC,
+.themeC .themeForm .darkColorC,
+.themeC .themeForm .bodyColorC,
+.themeC .themeForm .backgroundColorC,
+.themeC .themeForm .actionColorC,
+.themeC .themeForm .actionHoverColorC{
+    position: relative;
+}
+.themeC .themeForm .doubleFieldC 
+.tiktokLinkC {
+    flex: 0 0 50%;
+}
+.themeC .themeForm .lightColorC label,
+.themeC .themeForm .darkColorC label,
+.themeC .themeForm .bodyColorC label,
+.themeC .themeForm .backgroundColorC label,
+.themeC .themeForm .actionColorC label,
+.themeC .themeForm .actionHoverColorC label,
+.themeC .themeForm .fbLinkC label,
+.themeC .themeForm .instagramLinkC label,
+.themeC .themeForm .tiktokLinkC label,
+.themeC .themeForm .contactEmailC label,
+.themeC .themeForm .contactPhoneC label{
+    display: block;
+    font-size: .9rem;
+    margin: 10px 0 5px 0;
+}
+.themeC .themeForm .lightColorC input[type="text"],
+.themeC .themeForm .darkColorC input[type="text"],
+.themeC .themeForm .bodyColorC input[type="text"],
+.themeC .themeForm .backgroundColorC input[type="text"],
+.themeC .themeForm .actionColorC input[type="text"],
+.themeC .themeForm .actionHoverColorC input[type="text"],
+.themeC .themeForm .fbLinkC input[type="text"],
+.themeC .themeForm .instagramLinkC input[type="text"],
+.themeC .themeForm .tiktokLinkC input[type="text"],
+.themeC .themeForm .contactEmailC input[type="text"],
+.themeC .themeForm .contactPhoneC input[type="text"]{
+    font-size: 1rem;
+    padding: 8px 10px;
+    border: var(--border-style);
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.themeC .themeForm .lightColorC input[type="text"]:hover,
+.themeC .themeForm .darkColorC input[type="text"]:hover,
+.themeC .themeForm .bodyColorC input[type="text"]:hover,
+.themeC .themeForm .backgroundColorC input[type="text"]:hover,
+.themeC .themeForm .actionColorC input[type="text"]:hover,
+.themeC .themeForm .actionHoverColorC input[type="text"]:hover,
+.themeC .themeForm .fbLinkC input[type="text"]:hover,
+.themeC .themeForm .instagramLinkC input[type="text"]:hover,
+.themeC .themeForm .tiktokLinkC input[type="text"]:hover,
+.themeC .themeForm .contactEmailC input[type="text"]:hover,
+.themeC .themeForm .contactPhoneC input[type="text"]:hover{
+    background-color: var(--hover-color);
+}
+.themeC .themeForm .lightColorC input[type="text"]:focus,
+.themeC .themeForm .darkColorC input[type="text"]:focus,
+.themeC .themeForm .bodyColorC input[type="text"]:focus,
+.themeC .themeForm .backgroundColorC input[type="text"]:focus,
+.themeC .themeForm .actionColorC input[type="text"]:focus,
+.themeC .themeForm .actionHoverColorC input[type="text"]:focus,
+.themeC .themeForm .fbLinkC input[type="text"]:focus,
+.themeC .themeForm .instagramLinkC input[type="text"]:focus,
+.themeC .themeForm .tiktokLinkC input[type="text"]:focus,
+.themeC .themeForm .contactEmailC input[type="text"]:focus,
+.themeC .themeForm .contactPhoneC input[type="text"]:focus{
+    background-color: var(--hover-color);
+}
+.themeC .themeForm .lightColorC p,
+.themeC .themeForm .darkColorC p,
+.themeC .themeForm .bodyColorC p,
+.themeC .themeForm .backgroundColorC p,
+.themeC .themeForm .actionColorC p,
+.themeC .themeForm .actionHoverColorC p,
+.themeC .themeForm .fbLinkC p,
+.themeC .themeForm .instagramLinkC p,
+.themeC .themeForm .tiktokLinkC p,
+.themeC .themeForm .contactEmailC p,
+.themeC .themeForm .contactPhoneC p{
+    font-size: .9rem;
+    color: var(--error-color);
+    margin: 0;
+}
+.themeC .themeForm .lightColorC input[type="color"],
+.themeC .themeForm .darkColorC input[type="color"],
+.themeC .themeForm .bodyColorC input[type="color"],
+.themeC .themeForm .backgroundColorC input[type="color"],
+.themeC .themeForm .actionColorC input[type="color"],
+.themeC .themeForm .actionHoverColorC input[type="color"]{
+    position: absolute;
+    top: 48px;
+    width: 28px; height: 28px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: var(--border-style);
+    background-color: var(--hover-color);
+}
+
+/* update button */
+
+.themeC .themeForm .updateBtnC{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+.themeC .themeForm .updateBtnC .updateBtn{
+    background-color: var(--light-blue);
+    padding: 5px 10px;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: .9rem;
+    border: 1px solid #ffffff;
+
+    font-family: "Noto Naskh Arabic", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.themeC .themeForm .updateBtnC .updateBtn:hover{
+    background-color: var(--dark-blue);
+    cursor: pointer;
+}
+.themeC .themeForm .updateBtnC .updateBtn:disabled{
+    background-color: var(--hover-color);
+    cursor: text;
+    color: var(--light-black);
+    border: var(--border-style);
+}
+
+/* ================= RESPONSIVE THEME ================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+
+    .themeC {
+        padding: 16px;
+    }
+
+    .themeC .themeHeader {
+        font-size: 1.4rem;
+    }
+
+    .themeC .themeForm .doubleFieldC {
+        gap: 12px;
+    }
+
+    /* Color picker alignment */
+    .themeC .themeForm .lightColorC input[type="color"],
+    .themeC .themeForm .darkColorC input[type="color"],
+    .themeC .themeForm .bodyColorC input[type="color"],
+    .themeC .themeForm .backgroundColorC input[type="color"],
+    .themeC .themeForm .actionColorC input[type="color"],
+    .themeC .themeForm .actionHoverColorC input[type="color"] {
+        top: 42px;
+        width: 32px;
+        height: 32px;
+    }
+}
+
+/* Mobile & small tablets */
+@media (max-width: 768px) {
+
+    /* Stack all double fields */
+    .themeC .themeForm .doubleFieldC {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .themeC .themeForm .doubleFieldC div {
+        flex: 1 1 100%;
+    }
+
+    /* Contact fields full width */
+    .themeC .themeForm .doubleFieldC .contactEmailC,
+    .themeC .themeForm .doubleFieldC .contactPhoneC {
+        flex: 1 1 100%;
+    }
+
+    /* Inputs slightly taller for touch */
+    .themeC .themeForm input[type="text"] {
+        font-size: 1rem;
+        padding: 10px 12px;
+    }
+
+    /* Color picker alignment */
+    .themeC .themeForm .lightColorC input[type="color"],
+    .themeC .themeForm .darkColorC input[type="color"],
+    .themeC .themeForm .bodyColorC input[type="color"],
+    .themeC .themeForm .backgroundColorC input[type="color"],
+    .themeC .themeForm .actionColorC input[type="color"],
+    .themeC .themeForm .actionHoverColorC input[type="color"] {
+        top: 42px;
+        width: 32px;
+        height: 32px;
+    }
+
+    /* Headers spacing */
+    .themeC .themeForm h4 {
+        margin-top: 24px;
+        font-size: 1.05rem;
+    }
+
+    /* Update button centered */
+    .themeC .themeForm .updateBtnC {
+        justify-content: center;
+    }
+
+    .themeC .themeForm .updateBtnC .updateBtn {
+        width: 100%;
+        font-size: 1rem;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+
+    .themeC {
+        padding: 12px;
+    }
+
+    .themeC .themeHeader {
+        font-size: 1.25rem;
+    }
+
+    .themeC .themeForm label {
+        font-size: .85rem;
+    }
+
+    .themeC .themeForm input[type="text"] {
+        font-size: .95rem;
+    }
+
+    /* Color picker slightly smaller */
+    .themeC .themeForm .lightColorC input[type="color"],
+    .themeC .themeForm .darkColorC input[type="color"],
+    .themeC .themeForm .bodyColorC input[type="color"],
+    .themeC .themeForm .backgroundColorC input[type="color"],
+    .themeC .themeForm .actionColorC input[type="color"],
+    .themeC .themeForm .actionHoverColorC input[type="color"] {
+        width: 28px;
+        height: 28px;
+    }
+}
+
